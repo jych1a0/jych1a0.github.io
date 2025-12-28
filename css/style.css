@@ -40,6 +40,18 @@ nav a:hover {
     color: #00bcd4;
 }
 
+.lang-switch a {
+    background: #00bcd4;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.lang-switch a:hover {
+    background: #00a0b4;
+    color: #fff;
+}
+
 /* 主要區塊 */
 main {
     padding-top: 60px;
