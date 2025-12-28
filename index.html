@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的個人網站</title>
+    <title>Yu-Chiao Jhaung | B5G/6G Researcher</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +12,10 @@
             <ul>
                 <li><a href="#home">首頁</a></li>
                 <li><a href="#about">關於我</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#experience">工作經歷</a></li>
                 <li><a href="#projects">專案</a></li>
+                <li><a href="#education">學歷</a></li>
                 <li><a href="#contact">聯絡</a></li>
             </ul>
         </nav>
@@ -20,30 +23,199 @@
 
     <main>
         <section id="home" class="hero">
-            <h1>歡迎來到我的個人網站</h1>
-            <p>這是我的 GitHub Pages 個人網站</p>
+            <h1>Yu-Chiao Jhaung</h1>
+            <p class="title">B5G/6G Researcher / Engineer</p>
+            <p class="location">New Taipei City, Taiwan</p>
+            <div class="hero-buttons">
+                <a href="JYC_Resume.pdf" class="btn btn-primary" download>下載履歷 PDF</a>
+                <a href="#contact" class="btn btn-secondary">聯絡我</a>
+            </div>
         </section>
 
         <section id="about">
             <h2>關於我</h2>
-            <p>在這裡介紹你自己...</p>
+            <p>As someone deeply engaged in the field of B5G/6G technologies, I have been continually delving into these areas and plan to further my research in future satellite communications. As an agile team leader, I am committed to sharing knowledge and cultivating communication and empathy within my team. Under my leadership, our lab team successfully established an AI/ML platform in the 6G project of the National Science Council, which was highly commended. These experiences have bolstered my confidence, and I look forward to achieving significant accomplishments in interdisciplinary integration.</p>
+        </section>
+
+        <section id="skills">
+            <h2>技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Architecture</h3>
+                    <p>B5G/6G, Cloud Infrastructure, Microservices, Edge Computing</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Methodology</h3>
+                    <p>Sustainable Architecture Design, 4+1 Architectural View Model, DevOps, MLOps</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Software</h3>
+                    <p>Back-End, AI/ML, Data Analysis, Front-End</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Firmware</h3>
+                    <p>Embedded AI Devices, FMCW Radar System</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Programming Languages</h3>
+                    <p>Python, Go, C, C++, Java, Javascript, PHP</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>工作經歷</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Dec 2022 - Present</div>
+                    <h3>B5G Researcher | Internship</h3>
+                    <p class="company">ONYX Healthcare Inc. - Taiwan, Taipei</p>
+                    <ul>
+                        <li>Research on OTA (Over-The-Air) transmission measurement methods</li>
+                        <li>Analysis of 5G network system architecture</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2022 - Dec 2022</div>
+                    <h3>Full-Stack Engineer | Internship</h3>
+                    <p class="company">Coretek LLC. - United States, Las Vegas</p>
+                    <ul>
+                        <li>Integration of Jira, Tempo, and Slack into a third-party application</li>
+                        <li>Established a SaaS by deploying to Heroku and integrating with PostgreSQL on AWS EC2</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2020 - Oct 2020</div>
+                    <h3>Data Analyst | Internship</h3>
+                    <p class="company">Wavenet Technology - Taiwan, Taipei</p>
+                    <ul>
+                        <li>Responsible for maintaining and optimizing a voting system using containerized Laravel PHP</li>
+                        <li>Utilized Google Analytics for data collection, preprocessing, and analysis of click-through rates</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jul 2020 - Sep 2020</div>
+                    <h3>Firmware Engineer | Internship</h3>
+                    <p class="company">Silicon XPandas - Taiwan, Taipei</p>
+                    <ul>
+                        <li>Modified the kernel of a device to establish I2C and SPI connections with System-on-Chips FPGA</li>
+                        <li>Employed Python's Locust tool to conduct stress tests on the system</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
-            <h2>我的專案</h2>
+            <h2>專案</h2>
             <div class="project-grid">
-                <!-- 在這裡添加你的專案 -->
+                <div class="project-card">
+                    <h3>6G Open Integrated Optical and Wireless Prototype System - AI/ML Platform</h3>
+                    <p class="project-date">Sep 2022 - Jun 2024</p>
+                    <p class="project-org">National Science and Technology Council (NSTC)</p>
+                    <h4>Highlights:</h4>
+                    <ul>
+                        <li>EuCNC, Belgium (June 2024): Demonstrating AR/VR applications based on the 5G Core Network and srsRAN</li>
+                        <li>COSCUP Conference (July 2023): Presented the concept of the developed AI/ML platform</li>
+                        <li>Platform Development: Led the team in developing a sustainable AI/ML platform from scratch</li>
+                    </ul>
+                    <h4>Tech Stack:</h4>
+                    <div class="tech-tags">
+                        <span>O-RAN</span><span>Docker</span><span>Kubernetes</span><span>KubeFlow</span>
+                        <span>Kafka</span><span>Kong</span><span>Next.js</span><span>Django</span><span>FastAPI</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>AI/ML-based Gesture Recognition on Edge Devices</h3>
+                    <p class="project-date">Sep 2021 - Sep 2022</p>
+                    <p class="project-org">Alltek Technology Corp.</p>
+                    <h4>Highlights:</h4>
+                    <ul>
+                        <li>Model Performance: Accuracy: 99.75%, Recall: 99.34%, Precision: 98.63%</li>
+                        <li>Developed a cross-compilation toolchain (Virtual Machine, Docker) and runtime (Python, C++)</li>
+                        <li>Designed an image recognition system and a GUI system for data collection and labeling</li>
+                    </ul>
+                    <h4>Tech Stack:</h4>
+                    <div class="tech-tags">
+                        <span>TensorFlow</span><span>TensorFlow Lite</span><span>CNN</span><span>LSTM</span>
+                        <span>60G FMCW Radar</span><span>PyQt</span><span>OpenCV</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Android in Docker</h3>
+                    <p class="project-date">Apr 2021 - Dec 2021</p>
+                    <p class="project-org">Silicon XPandas</p>
+                    <h4>Highlights:</h4>
+                    <ul>
+                        <li>Enhanced network security by implementing a VPN and utilizing Harbor as a private image registry</li>
+                        <li>Addressed embedded storage limitations by mounting the Android system as an iSCSI block to ARM work nodes</li>
+                        <li>Developed a mobile projection application, achieving end-to-end compression transmission</li>
+                    </ul>
+                    <h4>Tech Stack:</h4>
+                    <div class="tech-tags">
+                        <span>RK3399</span><span>Raspberry Pi</span><span>Kubernetes</span><span>K3s</span>
+                        <span>iSCSI</span><span>Java</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Sentiment Analysis based on NLP in Social Media</h3>
+                    <p class="project-date">Oct 2020 - Jan 2021</p>
+                    <p class="project-org">Silicon XPandas</p>
+                    <h4>Highlights:</h4>
+                    <ul>
+                        <li>Utilized Google BERT as a pre-trained model for fine-tuning, achieving better results than AWS Comprehend</li>
+                        <li>Involved in word processing including symbol filtering, sentence segmentation, and keyword extraction</li>
+                        <li>Analyzed and determined the content of comments on Facebook fan page posts</li>
+                    </ul>
+                    <h4>Tech Stack:</h4>
+                    <div class="tech-tags">
+                        <span>Google BERT</span><span>jieba</span><span>AWS EC2</span>
+                        <span>Selenium</span><span>BeautifulSoup4</span>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section id="education">
+            <h2>學歷與獎項</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Ph.D. in Electronic and Computer Engineering</h3>
+                    <p class="school">National Taiwan University of Science and Technology</p>
+                    <p class="date">Sep 2020 - Oct 2024</p>
+                </div>
+                <div class="education-card">
+                    <h3>Master's in Electronic and Computer Engineering</h3>
+                    <p class="school">National Taiwan University of Science and Technology</p>
+                    <p class="date">Sep 2019 - Sep 2020 (Direct Entry Ph.D. Program)</p>
+                </div>
+                <div class="education-card">
+                    <h3>Bachelor's in Electronic and Computer Engineering</h3>
+                    <p class="school">National Taiwan University of Science and Technology</p>
+                    <p class="date">Sep 2015 - Jul 2019</p>
+                </div>
+            </div>
+            <h3 class="awards-title">Awards</h3>
+            <ul class="awards-list">
+                <li><strong>112th Outstanding Youth on the Campus of NTUST</strong> - Dec 2023</li>
+                <li><strong>112th Outstanding Youth of the ECE, NTUST</strong> - Dec 2023</li>
+            </ul>
+            <h3 class="publications-title">Publications</h3>
+            <p class="publication">Jhuang, Y. C., Lin, Y. M., Zha, C., Leu, J. S., & Köppen, M. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11), 4260</p>
         </section>
 
         <section id="contact">
             <h2>聯絡我</h2>
-            <p>Email: your-email@example.com</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:so.jych1a0@gmail.com">so.jych1a0@gmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank">linkedin.com/in/yu-chiao-jhaung-644821163</a></p>
+                <p><strong>Location:</strong> New Taipei City, Taiwan</p>
+            </div>
+            <a href="JYC_Resume.pdf" class="btn btn-primary" download>下載完整履歷 PDF</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 我的個人網站. All rights reserved.</p>
+        <p>&copy; 2025 Yu-Chiao Jhaung. All rights reserved.</p>
     </footer>
 
     <script src="js/main.js"></script>
