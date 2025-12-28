@@ -369,6 +369,31 @@ section h2 {
     line-height: 1.6;
 }
 
+.patents-title {
+    color: #333;
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
+}
+
+.patent-item {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #1a5276;
+}
+
+.patent-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a5276;
+    margin-bottom: 0.5rem;
+}
+
+.patent-countries {
+    font-size: 0.9rem;
+    color: #666;
+}
+
 /* 聯絡區塊 */
 .contact-info {
     margin-bottom: 2rem;
