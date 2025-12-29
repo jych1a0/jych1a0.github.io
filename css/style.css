@@ -361,6 +361,30 @@ section h2 {
     border-bottom: 1px solid #eee;
 }
 
+.publications-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.publications-list .publication {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.publications-list .publication a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.publications-list .publication a:hover {
+    text-decoration: underline;
+}
+
 .publication {
     background: #f8f9fa;
     padding: 1rem;
