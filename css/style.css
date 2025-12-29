@@ -326,6 +326,25 @@ a:hover {
     color: var(--accent-dark);
 }
 
+/* Content Links - More Visible */
+.card a:not(.btn):not(.nav-link),
+.list-group-item a:not(.btn),
+section p a:not(.btn),
+section li a:not(.btn) {
+    color: var(--accent-dark);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 2px;
+}
+
+.card a:not(.btn):not(.nav-link):hover,
+.list-group-item a:not(.btn):hover,
+section p a:not(.btn):hover,
+section li a:not(.btn):hover {
+    color: var(--accent);
+    text-decoration-color: var(--accent-dark);
+}
+
 /* Alert Styling */
 .alert-secondary {
     background-color: #f1f5f9;
