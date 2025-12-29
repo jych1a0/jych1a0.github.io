@@ -10,66 +10,88 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="lang-switch"><a href="zh.html">中文</a></li>
-            </ul>
-        </nav>
-    </header>
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <img src="images/profile.jpg" alt="Yu-Chiao Jhuang" class="profile-photo">
+            <h1>Yu-Chiao Jhuang</h1>
+            <p class="subtitle">莊雨樵</p>
 
-    <main>
-        <section id="home" class="hero">
-            <img src="images/profile.jpg" alt="Yu-Chiao Jhaung" class="profile-photo">
-            <h1>Yu-Chiao Jhaung</h1>
-            <p class="title">B5G/6G Researcher / Engineer</p>
-            <p class="location">New Taipei City, Taiwan</p>
-            <div class="hero-buttons">
-                <a href="JYC_Resume.pdf" class="btn btn-primary" download>Download Resume</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            <div class="sidebar-section">
+                <p class="tagline">Specializing in <strong>Intent-Based Networking</strong></p>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="affiliation"><span class="label">Ph.D. Candidate</span><br>NTUST</p>
+                <p class="affiliation"><span class="label">Associate Research Engineer</span><br>ITRI</p>
+            </div>
+
+            <div class="sidebar-section">
+                <a href="mailto:so.jych1a0@gmail.com" class="contact-link">so.jych1a0@gmail.com</a>
+                <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="JYC_Resume.pdf" class="btn-download" download>Download Resume</a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#highlights">Highlights</a>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#publications">Publications</a>
+                <a href="#education">Education</a>
+            </nav>
+
+            <div class="lang-switch">
+                <a href="zh.html">中文</a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- Highlights Section -->
+        <section id="highlights" class="highlights-section">
+            <div class="highlights-grid">
+                <div class="highlight-card primary">
+                    <span class="highlight-icon">🎯</span>
+                    <span class="highlight-label">Research Focus</span>
+                    <span class="highlight-value">Intent-Based Networking</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">70%</span>
+                    <span class="highlight-label">Operation Time Reduced</span>
+                    <span class="highlight-detail">via AI Automation</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">2</span>
+                    <span class="highlight-label">Patents Pending</span>
+                    <span class="highlight-detail">TW, US, JP, CN</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">3</span>
+                    <span class="highlight-label">Publications</span>
+                    <span class="highlight-detail">SCI / Springer</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">2</span>
+                    <span class="highlight-label">Conference Talks</span>
+                    <span class="highlight-detail">COSCUP 2023, 2024</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">1</span>
+                    <span class="highlight-label">O-RAN Report</span>
+                    <span class="highlight-detail">w/ Dell, Nokia, NVIDIA</span>
+                </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
+            <h2>About</h2>
             <p>Ph.D. candidate at NTUST, currently at ITRI. My research focuses on <strong>Intent-Based Networking</strong>, exploring how natural language and AI can simplify network operations. Background spans wireless communications, AI/ML systems, cloud platforms, and embedded development. Recent work on IBN achieved <strong>70% reduction in operation time</strong> through AI automation, presented at Taiwan Innotech Expo 2025. Co-authored O-RAN green communication research report with industry partners including Dell, Nokia, and NVIDIA.</p>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Architecture</h3>
-                    <p>B5G/6G, Cloud Infrastructure, Microservices, Edge Computing</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Methodology</h3>
-                    <p>Sustainable Architecture Design, 4+1 Architectural View Model, DevOps, MLOps</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Software</h3>
-                    <p>Back-End, AI/ML, Data Analysis, Front-End</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Firmware</h3>
-                    <p>Embedded AI Devices, FMCW Radar System</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Programming Languages</h3>
-                    <p>Python, Go, C, C++, Java, Javascript, PHP</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Experience Section -->
         <section id="experience">
-            <h2>Work Experience</h2>
+            <h2>Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">Aug 2024 - Present</div>
@@ -120,10 +142,12 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects">
             <h2>Projects</h2>
             <div class="project-grid">
-                <div class="project-card">
+                <div class="project-card featured">
+                    <div class="project-badge">Featured</div>
                     <h3>Intent-Based Networking Solution (IBN)</h3>
                     <p class="project-date">Aug 2024 - Present</p>
                     <p class="project-org">Industrial Technology Research Institute (ITRI)</p>
@@ -138,6 +162,9 @@
                     <div class="tech-tags">
                         <span>5G/6G</span><span>Generative AI</span><span>AI Agent</span><span>Agentic AI</span>
                         <span>NLP</span><span>Network Orchestration</span><span>Intent-Based Networking</span>
+                    </div>
+                    <div class="project-patent">
+                        <strong>Patent:</strong> 「意圖釐清與多源知識整合之意圖式組網運作方法」(2025) - TW, US, JP, CN
                     </div>
                 </div>
                 <div class="project-card">
@@ -156,8 +183,9 @@
                         <span>Satellite Communication</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3>6G Open Integrated Optical and Wireless Prototype System - AI/ML Platform</h3>
+                <div class="project-card featured">
+                    <div class="project-badge">Featured</div>
+                    <h3>6G AI/ML Platform</h3>
                     <p class="project-date">Sep 2022 - Present</p>
                     <p class="project-org">National Science and Technology Council (NSTC)</p>
                     <h4>Highlights:</h4>
@@ -170,6 +198,9 @@
                     <div class="tech-tags">
                         <span>O-RAN</span><span>Docker</span><span>Kubernetes</span><span>KubeFlow</span>
                         <span>Kafka</span><span>Kong</span><span>Next.js</span><span>Django</span><span>FastAPI</span>
+                    </div>
+                    <div class="project-patent">
+                        <strong>Patent:</strong> 「應用於AI-RAN之跨平台資源協調系統及方法」(2025) - TW, US
                     </div>
                 </div>
                 <div class="project-card">
@@ -223,6 +254,44 @@
             </div>
         </section>
 
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Publications & Research</h2>
+
+            <h3 class="subsection-title">Journal & Conference Papers</h3>
+            <ul class="publications-list">
+                <li class="publication">Lin, S. H., <strong>Jhuang, Y. C.</strong>, Zha, C., Chen, Y. T., & Leu, J. S. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM." <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank">doi:10.1007/978-981-96-6721-5_13</a></li>
+                <li class="publication">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method Based on Multi-Scale Adaptive Dynamic Fusion Strategy." <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank">doi:10.1007/978-981-96-6721-5_3</a></li>
+                <li class="publication"><strong>Jhuang, Y. C.</strong>, Lin, Y. M., Zha, C., Leu, J. S., & Köppen, M. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11), 4260. <a href="https://doi.org/10.3390/s22114260" target="_blank">doi:10.3390/s22114260</a></li>
+            </ul>
+
+            <h3 class="subsection-title">Technical Reports</h3>
+            <ul class="publications-list">
+                <li class="publication">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]. Contributors: Dell Technologies, Reliance Jio, Nokia, Mavenir, Rakuten, NVIDIA, NTUST. <strong>Main contribution: Section 7 - Construction strategy for an energy-efficient AI/ML platform.</strong> <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank">PDF</a></li>
+            </ul>
+
+            <h3 class="subsection-title">Talks & Presentations</h3>
+            <ul class="publications-list">
+                <li class="publication"><strong>COSCUP 2024</strong> - "O-RAN與AI/ML平台的結合：實現AR/VR QoS的智能服務管理與部署" <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank">YouTube</a></li>
+                <li class="publication"><strong>COSCUP 2023</strong> - "AI/ML in 5G O-RAN" <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank">YouTube</a></li>
+            </ul>
+
+            <h3 class="subsection-title">Patents (Pending)</h3>
+            <div class="patents-grid">
+                <div class="patent-item">
+                    <p class="patent-name">"Intent Clarification and Multi-Source Knowledge Integration Method for Intent-Based Networking Operation" (2025)</p>
+                    <p class="patent-countries"><strong>Filing Countries:</strong> Taiwan, United States, Japan, China</p>
+                    <p class="patent-project">Project: IBN</p>
+                </div>
+                <div class="patent-item">
+                    <p class="patent-name">"Cross-Platform Resource Coordination System and Method for AI-RAN" (2025)</p>
+                    <p class="patent-countries"><strong>Filing Countries:</strong> Taiwan, United States</p>
+                    <p class="patent-project">Project: 6G AI/ML Platform</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
         <section id="education">
             <h2>Education & Awards</h2>
             <div class="education-grid">
@@ -242,56 +311,39 @@
                     <p class="date">Sep 2015 - Jul 2019</p>
                 </div>
             </div>
-            <h3 class="awards-title">Awards</h3>
+
+            <h3 class="subsection-title">Awards & Honors</h3>
             <ul class="awards-list">
                 <li><strong>Phi Tau Phi Scholastic Honor Society Member</strong> - 2024</li>
                 <li><strong>112th Outstanding Youth on the Campus of NTUST</strong> - Dec 2023</li>
                 <li><strong>112th Outstanding Youth of the ECE, NTUST</strong> - Dec 2023</li>
-                <li><strong>Innovation & Entrepreneurship Program - Honorable Mention</strong> - 2022<br><span style="font-weight: normal; font-size: 0.9rem;">Team "US Social Platform" - Startup Company & Fundraising Competition</span></li>
-            </ul>
-            <h3 class="publications-title">Publications</h3>
-            <ul class="publications-list">
-                <li class="publication">Lin, S. H., <strong>Jhuang, Y. C.</strong>, Zha, C., Chen, Y. T., & Leu, J. S. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM." <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank">doi:10.1007/978-981-96-6721-5_13</a></li>
-                <li class="publication">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method Based on Multi-Scale Adaptive Dynamic Fusion Strategy." <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank">doi:10.1007/978-981-96-6721-5_3</a></li>
-                <li class="publication"><strong>Jhuang, Y. C.</strong>, Lin, Y. M., Zha, C., Leu, J. S., & Köppen, M. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11), 4260. <a href="https://doi.org/10.3390/s22114260" target="_blank">doi:10.3390/s22114260</a></li>
+                <li><strong>Innovation & Entrepreneurship Program - Honorable Mention</strong> - 2022<br><span class="award-detail">Team "US Social Platform" - Startup Company & Fundraising Competition</span></li>
             </ul>
 
-            <h3 class="publications-title">Technical Reports</h3>
-            <ul class="publications-list">
-                <li class="publication">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]. Contributors: Dell Technologies, Reliance Jio, Nokia, Mavenir, Rakuten, NVIDIA, NTUST. <strong>Main contribution: Section 7 - Construction strategy for an energy-efficient AI/ML platform.</strong> <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank">PDF</a></li>
-            </ul>
-
-            <h3 class="publications-title">Talks & Presentations</h3>
-            <ul class="publications-list">
-                <li class="publication"><strong>COSCUP 2024</strong> - "O-RAN與AI/ML平台的結合：實現AR/VR QoS的智能服務管理與部署" <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank">YouTube</a></li>
-                <li class="publication"><strong>COSCUP 2023</strong> - "AI/ML in 5G O-RAN" <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank">YouTube</a></li>
-            </ul>
-
-            <h3 class="patents-title">Patents (Pending)</h3>
-            <div class="patent-item">
-                <p class="patent-name">"Intent Clarification and Multi-Source Knowledge Integration Method for Intent-Based Networking Operation" (2025)</p>
-                <p class="patent-countries"><strong>Filing Countries:</strong> Taiwan, United States, Japan, China</p>
-            </div>
-            <div class="patent-item">
-                <p class="patent-name">"Cross-Platform Resource Coordination System and Method for AI-RAN" (2025)</p>
-                <p class="patent-countries"><strong>Filing Countries:</strong> Taiwan, United States</p>
+            <h3 class="subsection-title">Skills</h3>
+            <div class="skills-compact">
+                <div class="skill-category">
+                    <strong>Architecture:</strong> B5G/6G, Cloud Infrastructure, Microservices, Edge Computing
+                </div>
+                <div class="skill-category">
+                    <strong>Methodology:</strong> Sustainable Architecture Design, 4+1 Architectural View Model, DevOps, MLOps
+                </div>
+                <div class="skill-category">
+                    <strong>Software:</strong> Back-End, AI/ML, Data Analysis, Front-End
+                </div>
+                <div class="skill-category">
+                    <strong>Firmware:</strong> Embedded AI Devices, FMCW Radar System
+                </div>
+                <div class="skill-category">
+                    <strong>Languages:</strong> Python, Go, C, C++, Java, Javascript, PHP
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto:so.jych1a0@gmail.com">so.jych1a0@gmail.com</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank">linkedin.com/in/yu-chiao-jhaung-644821163</a></p>
-                <p><strong>Location:</strong> New Taipei City, Taiwan</p>
-            </div>
-            <a href="JYC_Resume.pdf" class="btn btn-primary" download>Download Full Resume</a>
-        </section>
+        <footer>
+            <p>&copy; 2025 Yu-Chiao Jhuang. All rights reserved.</p>
+        </footer>
     </main>
-
-    <footer>
-        <p>&copy; 2025 Yu-Chiao Jhaung. All rights reserved.</p>
-    </footer>
 
     <script src="js/main.js"></script>
 </body>

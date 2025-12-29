@@ -10,64 +10,86 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">首頁</a></li>
-                <li><a href="#about">關於我</a></li>
-                <li><a href="#skills">技能</a></li>
-                <li><a href="#experience">工作經歷</a></li>
-                <li><a href="#projects">專案</a></li>
-                <li><a href="#education">學歷</a></li>
-                <li><a href="#contact">聯絡</a></li>
-                <li class="lang-switch"><a href="index.html">English</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
+    <aside class="sidebar">
+        <div class="sidebar-content">
             <img src="images/profile.jpg" alt="莊雨樵" class="profile-photo">
             <h1>莊雨樵</h1>
-            <p class="title">B5G/6G 研究員 / 工程師</p>
-            <p class="location">台灣 新北市</p>
-            <div class="hero-buttons">
-                <a href="JYC_Resume.pdf" class="btn btn-primary" download>下載履歷 PDF</a>
-                <a href="#contact" class="btn btn-secondary">聯絡我</a>
+            <p class="subtitle">Yu-Chiao Jhuang</p>
+
+            <div class="sidebar-section">
+                <p class="tagline">專攻<strong>意圖式組網</strong></p>
+            </div>
+
+            <div class="sidebar-section">
+                <p class="affiliation"><span class="label">博士候選人</span><br>國立台灣科技大學</p>
+                <p class="affiliation"><span class="label">副研究員</span><br>工研院資通所</p>
+            </div>
+
+            <div class="sidebar-section">
+                <a href="mailto:so.jych1a0@gmail.com" class="contact-link">so.jych1a0@gmail.com</a>
+                <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="JYC_Resume.pdf" class="btn-download" download>下載履歷</a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#highlights">亮點</a>
+                <a href="#about">關於我</a>
+                <a href="#experience">工作經歷</a>
+                <a href="#projects">專案</a>
+                <a href="#publications">學術成果</a>
+                <a href="#education">學歷</a>
+            </nav>
+
+            <div class="lang-switch">
+                <a href="index.html">English</a>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <!-- Highlights Section -->
+        <section id="highlights" class="highlights-section">
+            <div class="highlights-grid">
+                <div class="highlight-card primary">
+                    <span class="highlight-icon">🎯</span>
+                    <span class="highlight-label">研究重點</span>
+                    <span class="highlight-value">意圖式組網</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">70%</span>
+                    <span class="highlight-label">操作時間縮減</span>
+                    <span class="highlight-detail">透過 AI 自動化</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">2</span>
+                    <span class="highlight-label">專利申請中</span>
+                    <span class="highlight-detail">台、美、日、中</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">3</span>
+                    <span class="highlight-label">學術發表</span>
+                    <span class="highlight-detail">SCI / Springer</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">2</span>
+                    <span class="highlight-label">技術演講</span>
+                    <span class="highlight-detail">COSCUP 2023, 2024</span>
+                </div>
+                <div class="highlight-card">
+                    <span class="highlight-number">1</span>
+                    <span class="highlight-label">O-RAN 研究報告</span>
+                    <span class="highlight-detail">Dell, Nokia, NVIDIA</span>
+                </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about">
             <h2>關於我</h2>
             <p>台科大博士候選人，現職工研院資通所。研究專注於<strong>意圖式組網（Intent-Based Networking）</strong>，探索如何透過自然語言與 AI 簡化網路維運。學經歷涵蓋無線通訊、AI/ML 系統、雲端平台與嵌入式開發。近期 IBN 專案透過 AI 自動化達成<strong>操作時間縮減 70%</strong>，並於 2025 台灣創新技術博覽會展出。曾與 Dell、Nokia、NVIDIA 等業界夥伴共同撰寫 O-RAN 綠色通訊研究報告。</p>
         </section>
 
-        <section id="skills">
-            <h2>技能</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>系統架構</h3>
-                    <p>B5G/6G、雲端基礎設施、微服務、邊緣運算</p>
-                </div>
-                <div class="skill-card">
-                    <h3>方法論</h3>
-                    <p>永續架構設計、4+1 架構視圖模型、DevOps、MLOps</p>
-                </div>
-                <div class="skill-card">
-                    <h3>軟體</h3>
-                    <p>後端開發、AI/ML、資料分析、前端開發</p>
-                </div>
-                <div class="skill-card">
-                    <h3>韌體</h3>
-                    <p>嵌入式 AI 裝置、FMCW 雷達系統</p>
-                </div>
-                <div class="skill-card">
-                    <h3>程式語言</h3>
-                    <p>Python, Go, C, C++, Java, Javascript, PHP</p>
-                </div>
-            </div>
-        </section>
-
+        <!-- Experience Section -->
         <section id="experience">
             <h2>工作經歷</h2>
             <div class="timeline">
@@ -120,10 +142,12 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects">
             <h2>專案經歷</h2>
             <div class="project-grid">
-                <div class="project-card">
+                <div class="project-card featured">
+                    <div class="project-badge">重點專案</div>
                     <h3>意圖式組網解決方案（IBN）</h3>
                     <p class="project-date">2024年8月 - 至今</p>
                     <p class="project-org">工業技術研究院</p>
@@ -138,6 +162,9 @@
                     <div class="tech-tags">
                         <span>5G/6G</span><span>生成式 AI</span><span>AI Agent</span><span>Agentic AI</span>
                         <span>自然語言處理</span><span>網路協調</span><span>意圖式組網</span>
+                    </div>
+                    <div class="project-patent">
+                        <strong>專利：</strong>「意圖釐清與多源知識整合之意圖式組網運作方法」(2025) - 台、美、日、中
                     </div>
                 </div>
                 <div class="project-card">
@@ -156,8 +183,9 @@
                         <span>衛星通訊</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3>6G 開放整合光學與無線原型系統 - AI/ML 平台</h3>
+                <div class="project-card featured">
+                    <div class="project-badge">重點專案</div>
+                    <h3>6G AI/ML 平台</h3>
                     <p class="project-date">2022年9月 - 至今</p>
                     <p class="project-org">國家科學及技術委員會 (NSTC)</p>
                     <h4>專案亮點：</h4>
@@ -170,6 +198,9 @@
                     <div class="tech-tags">
                         <span>O-RAN</span><span>Docker</span><span>Kubernetes</span><span>KubeFlow</span>
                         <span>Kafka</span><span>Kong</span><span>Next.js</span><span>Django</span><span>FastAPI</span>
+                    </div>
+                    <div class="project-patent">
+                        <strong>專利：</strong>「應用於AI-RAN之跨平台資源協調系統及方法」(2025) - 台、美
                     </div>
                 </div>
                 <div class="project-card">
@@ -223,6 +254,44 @@
             </div>
         </section>
 
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>學術成果</h2>
+
+            <h3 class="subsection-title">期刊與會議論文</h3>
+            <ul class="publications-list">
+                <li class="publication">Lin, S. H., <strong>Jhuang, Y. C.</strong>, Zha, C., Chen, Y. T., & Leu, J. S. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM." <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank">doi:10.1007/978-981-96-6721-5_13</a></li>
+                <li class="publication">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method Based on Multi-Scale Adaptive Dynamic Fusion Strategy." <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank">doi:10.1007/978-981-96-6721-5_3</a></li>
+                <li class="publication"><strong>Jhuang, Y. C.</strong>, Lin, Y. M., Zha, C., Leu, J. S., & Köppen, M. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11), 4260. <a href="https://doi.org/10.3390/s22114260" target="_blank">doi:10.3390/s22114260</a></li>
+            </ul>
+
+            <h3 class="subsection-title">技術報告</h3>
+            <ul class="publications-list">
+                <li class="publication">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]. 貢獻單位：Dell Technologies, Reliance Jio, Nokia, Mavenir, Rakuten, NVIDIA, NTUST. <strong>主要貢獻：第7節 - 節能 AI/ML 平台建置策略。</strong> <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank">PDF</a></li>
+            </ul>
+
+            <h3 class="subsection-title">演講與發表</h3>
+            <ul class="publications-list">
+                <li class="publication"><strong>COSCUP 2024</strong> - 「O-RAN與AI/ML平台的結合：實現AR/VR QoS的智能服務管理與部署」 <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank">YouTube</a></li>
+                <li class="publication"><strong>COSCUP 2023</strong> - 「AI/ML in 5G O-RAN」 <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank">YouTube</a></li>
+            </ul>
+
+            <h3 class="subsection-title">專利（申請中）</h3>
+            <div class="patents-grid">
+                <div class="patent-item">
+                    <p class="patent-name">「意圖釐清與多源知識整合之意圖式組網運作方法」(2025)</p>
+                    <p class="patent-countries"><strong>申請國家：</strong>台灣、美國、日本、中國大陸</p>
+                    <p class="patent-project">專案：IBN</p>
+                </div>
+                <div class="patent-item">
+                    <p class="patent-name">「應用於AI-RAN之跨平台資源協調系統及方法」(2025)</p>
+                    <p class="patent-countries"><strong>申請國家：</strong>台灣、美國</p>
+                    <p class="patent-project">專案：6G AI/ML 平台</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
         <section id="education">
             <h2>學歷與獎項</h2>
             <div class="education-grid">
@@ -242,56 +311,39 @@
                     <p class="date">2015年9月 - 2019年7月</p>
                 </div>
             </div>
-            <h3 class="awards-title">獎項</h3>
+
+            <h3 class="subsection-title">獎項與榮譽</h3>
             <ul class="awards-list">
                 <li><strong>113年度斐陶斐榮譽學會會員</strong> - 2024年</li>
                 <li><strong>112學年度台科大校園傑出青年</strong> - 2023年12月</li>
                 <li><strong>112學年度電資學院傑出青年</strong> - 2023年12月</li>
-                <li><strong>110學年度創新創業教育計畫 - 佳作</strong> - 2022年<br><span style="font-weight: normal; font-size: 0.9rem;">「US社群平台」團隊 - 開關公司與募資實戰競賽</span></li>
-            </ul>
-            <h3 class="publications-title">學術發表</h3>
-            <ul class="publications-list">
-                <li class="publication">Lin, S. H., <strong>Jhuang, Y. C.</strong>, Zha, C., Chen, Y. T., & Leu, J. S. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM." <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank">doi:10.1007/978-981-96-6721-5_13</a></li>
-                <li class="publication">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method Based on Multi-Scale Adaptive Dynamic Fusion Strategy." <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank">doi:10.1007/978-981-96-6721-5_3</a></li>
-                <li class="publication"><strong>Jhuang, Y. C.</strong>, Lin, Y. M., Zha, C., Leu, J. S., & Köppen, M. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11), 4260. <a href="https://doi.org/10.3390/s22114260" target="_blank">doi:10.3390/s22114260</a></li>
+                <li><strong>110學年度創新創業教育計畫 - 佳作</strong> - 2022年<br><span class="award-detail">「US社群平台」團隊 - 開關公司與募資實戰競賽</span></li>
             </ul>
 
-            <h3 class="publications-title">技術報告</h3>
-            <ul class="publications-list">
-                <li class="publication">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]. 貢獻單位：Dell Technologies, Reliance Jio, Nokia, Mavenir, Rakuten, NVIDIA, NTUST. <strong>主要貢獻：第7節 - 節能 AI/ML 平台建置策略。</strong> <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank">PDF</a></li>
-            </ul>
-
-            <h3 class="publications-title">演講與發表</h3>
-            <ul class="publications-list">
-                <li class="publication"><strong>COSCUP 2024</strong> - 「O-RAN與AI/ML平台的結合：實現AR/VR QoS的智能服務管理與部署」 <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank">YouTube</a></li>
-                <li class="publication"><strong>COSCUP 2023</strong> - 「AI/ML in 5G O-RAN」 <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank">YouTube</a></li>
-            </ul>
-
-            <h3 class="patents-title">專利（申請中）</h3>
-            <div class="patent-item">
-                <p class="patent-name">「意圖釐清與多源知識整合之意圖式組網運作方法」(2025)</p>
-                <p class="patent-countries"><strong>申請國家：</strong>台灣、美國、日本、中國大陸</p>
-            </div>
-            <div class="patent-item">
-                <p class="patent-name">「應用於AI-RAN之跨平台資源協調系統及方法」(2025)</p>
-                <p class="patent-countries"><strong>申請國家：</strong>台灣、美國</p>
+            <h3 class="subsection-title">技能</h3>
+            <div class="skills-compact">
+                <div class="skill-category">
+                    <strong>系統架構：</strong>B5G/6G、雲端基礎設施、微服務、邊緣運算
+                </div>
+                <div class="skill-category">
+                    <strong>方法論：</strong>永續架構設計、4+1 架構視圖模型、DevOps、MLOps
+                </div>
+                <div class="skill-category">
+                    <strong>軟體：</strong>後端開發、AI/ML、資料分析、前端開發
+                </div>
+                <div class="skill-category">
+                    <strong>韌體：</strong>嵌入式 AI 裝置、FMCW 雷達系統
+                </div>
+                <div class="skill-category">
+                    <strong>程式語言：</strong>Python, Go, C, C++, Java, Javascript, PHP
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>聯絡我</h2>
-            <div class="contact-info">
-                <p><strong>Email：</strong> <a href="mailto:so.jych1a0@gmail.com">so.jych1a0@gmail.com</a></p>
-                <p><strong>LinkedIn：</strong> <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank">linkedin.com/in/yu-chiao-jhaung-644821163</a></p>
-                <p><strong>地點：</strong> 台灣 新北市</p>
-            </div>
-            <a href="JYC_Resume.pdf" class="btn btn-primary" download>下載完整履歷 PDF</a>
-        </section>
+        <footer>
+            <p>&copy; 2025 莊雨樵. All rights reserved.</p>
+        </footer>
     </main>
-
-    <footer>
-        <p>&copy; 2025 莊雨樵. All rights reserved.</p>
-    </footer>
 
     <script src="js/main.js"></script>
 </body>
