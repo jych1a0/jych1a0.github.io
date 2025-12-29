@@ -7,344 +7,610 @@
     <meta property="og:title" content="莊雨樵 | Yu-Chiao Jhuang">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jych1a0.github.io/zh.html">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <aside class="sidebar">
-        <div class="sidebar-content">
-            <img src="images/profile.jpg" alt="莊雨樵" class="profile-photo">
-            <h1>莊雨樵</h1>
-            <p class="subtitle">Yu-Chiao Jhuang</p>
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <!-- Mobile Navbar -->
+    <nav class="navbar navbar-dark bg-primary d-lg-none fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">莊雨樵</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
 
-            <div class="sidebar-section">
-                <p class="tagline">專攻<strong>意圖式組網</strong></p>
+    <!-- Mobile Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start bg-primary text-white d-lg-none" tabindex="-1" id="mobileSidebar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">選單</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body text-center">
+            <img src="images/profile.jpg" alt="莊雨樵" class="rounded-circle mb-3" width="120" height="120">
+            <h5>莊雨樵</h5>
+            <p class="text-white-50">Yu-Chiao Jhuang</p>
+            <nav class="nav flex-column">
+                <a class="nav-link text-white" href="#highlights" data-bs-dismiss="offcanvas">亮點</a>
+                <a class="nav-link text-white" href="#about" data-bs-dismiss="offcanvas">關於我</a>
+                <a class="nav-link text-white" href="#experience" data-bs-dismiss="offcanvas">工作經歷</a>
+                <a class="nav-link text-white" href="#projects" data-bs-dismiss="offcanvas">專案</a>
+                <a class="nav-link text-white" href="#publications" data-bs-dismiss="offcanvas">學術成果</a>
+                <a class="nav-link text-white" href="#education" data-bs-dismiss="offcanvas">學歷</a>
+            </nav>
+            <hr class="my-3 opacity-25">
+            <a href="index.html" class="btn btn-outline-light btn-sm">English</a>
+        </div>
+    </div>
+
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar d-none d-lg-flex flex-column bg-primary text-white">
+        <div class="sidebar-content p-4 text-center">
+            <img src="images/profile.jpg" alt="莊雨樵" class="rounded-circle border border-3 border-white shadow mb-3 profile-photo">
+            <h4 class="fw-bold mb-1">莊雨樵</h4>
+            <p class="text-white-50 mb-3">Yu-Chiao Jhuang</p>
+
+            <div class="mb-3">
+                <p class="small mb-0">專攻</p>
+                <span class="badge bg-info fs-6">意圖式組網</span>
             </div>
 
-            <div class="sidebar-section">
-                <p class="affiliation"><span class="label">博士候選人</span><br>國立台灣科技大學</p>
-                <p class="affiliation"><span class="label">副研究員</span><br>工研院資通所</p>
+            <div class="mb-3 small">
+                <p class="mb-1"><i class="bi bi-mortarboard me-1"></i> 博士候選人，台科大</p>
+                <p class="mb-0"><i class="bi bi-building me-1"></i> 副研究員，工研院</p>
             </div>
 
-            <div class="sidebar-section">
-                <a href="mailto:so.jych1a0@gmail.com" class="contact-link">so.jych1a0@gmail.com</a>
-                <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank" class="contact-link">LinkedIn</a>
-                <a href="JYC_Resume.pdf" class="btn-download" download>下載履歷</a>
+            <div class="mb-3">
+                <a href="mailto:so.jych1a0@gmail.com" class="d-block text-white-50 text-decoration-none small mb-1">
+                    <i class="bi bi-envelope me-1"></i> so.jych1a0@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank" class="d-block text-white-50 text-decoration-none small">
+                    <i class="bi bi-linkedin me-1"></i> LinkedIn
+                </a>
             </div>
 
-            <nav class="sidebar-nav">
-                <a href="#highlights">亮點</a>
-                <a href="#about">關於我</a>
-                <a href="#experience">工作經歷</a>
-                <a href="#projects">專案</a>
-                <a href="#publications">學術成果</a>
-                <a href="#education">學歷</a>
+            <a href="JYC_Resume.pdf" class="btn btn-info btn-sm mb-4" download>
+                <i class="bi bi-download me-1"></i> 下載履歷
+            </a>
+
+            <nav id="sidebar-nav" class="nav flex-column text-start">
+                <a class="nav-link text-white py-2" href="#highlights"><i class="bi bi-star me-2"></i>亮點</a>
+                <a class="nav-link text-white py-2" href="#about"><i class="bi bi-person me-2"></i>關於我</a>
+                <a class="nav-link text-white py-2" href="#experience"><i class="bi bi-briefcase me-2"></i>工作經歷</a>
+                <a class="nav-link text-white py-2" href="#projects"><i class="bi bi-folder me-2"></i>專案</a>
+                <a class="nav-link text-white py-2" href="#publications"><i class="bi bi-journal-text me-2"></i>學術成果</a>
+                <a class="nav-link text-white py-2" href="#education"><i class="bi bi-award me-2"></i>學歷</a>
             </nav>
 
-            <div class="lang-switch">
-                <a href="index.html">English</a>
-            </div>
+            <hr class="my-3 opacity-25">
+            <a href="index.html" class="btn btn-outline-light btn-sm"><i class="bi bi-translate me-1"></i> English</a>
         </div>
     </aside>
 
+    <!-- Main Content -->
     <main class="main-content">
         <!-- Highlights Section -->
-        <section id="highlights" class="highlights-section">
-            <div class="highlights-grid">
-                <div class="highlight-card primary">
-                    <span class="highlight-icon">🎯</span>
-                    <span class="highlight-label">研究重點</span>
-                    <span class="highlight-value">意圖式組網</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">70%</span>
-                    <span class="highlight-label">操作時間縮減</span>
-                    <span class="highlight-detail">透過 AI 自動化</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">2</span>
-                    <span class="highlight-label">專利申請中</span>
-                    <span class="highlight-detail">台、美、日、中</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">3</span>
-                    <span class="highlight-label">學術發表</span>
-                    <span class="highlight-detail">SCI / Springer</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">2</span>
-                    <span class="highlight-label">技術演講</span>
-                    <span class="highlight-detail">COSCUP 2023, 2024</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">1</span>
-                    <span class="highlight-label">O-RAN 研究報告</span>
-                    <span class="highlight-detail">Dell, Nokia, NVIDIA</span>
+        <section id="highlights" class="py-5 bg-light">
+            <div class="container-fluid px-4">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card primary-card">
+                            <div class="card-body text-center text-white">
+                                <i class="bi bi-bullseye fs-1 mb-2"></i>
+                                <p class="small mb-1 opacity-75">研究重點</p>
+                                <h5 class="fw-bold mb-0">意圖式組網</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">70%</h2>
+                                <p class="small text-muted mb-1">操作時間縮減</p>
+                                <span class="badge bg-success">AI 自動化</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">2</h2>
+                                <p class="small text-muted mb-1">專利申請中</p>
+                                <span class="badge bg-secondary">台、美、日、中</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">3</h2>
+                                <p class="small text-muted mb-1">學術發表</p>
+                                <span class="badge bg-info">SCI / Springer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">2</h2>
+                                <p class="small text-muted mb-1">技術演講</p>
+                                <span class="badge bg-warning text-dark">COSCUP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">1</h2>
+                                <p class="small text-muted mb-1">O-RAN 研究報告</p>
+                                <span class="badge bg-dark">Dell, Nokia, NVIDIA</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about">
-            <h2>關於我</h2>
-            <p>台科大博士候選人，現職工研院資通所。研究專注於<strong>意圖式組網（Intent-Based Networking）</strong>，探索如何透過自然語言與 AI 簡化網路維運。學經歷涵蓋無線通訊、AI/ML 系統、雲端平台與嵌入式開發。近期 IBN 專案透過 AI 自動化達成<strong>操作時間縮減 70%</strong>，並於 2025 台灣創新技術博覽會展出。曾與 Dell、Nokia、NVIDIA 等業界夥伴共同撰寫 O-RAN 綠色通訊研究報告。</p>
+        <section id="about" class="py-5">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-person-circle me-2"></i>關於我</h2>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <p class="lead mb-0">
+                            台科大博士候選人，現職工研院資通所。研究專注於<strong class="text-primary">意圖式組網（Intent-Based Networking）</strong>，探索如何透過自然語言與 AI 簡化網路維運。學經歷涵蓋無線通訊、AI/ML 系統、雲端平台與嵌入式開發。近期 IBN 專案透過 AI 自動化達成<span class="badge bg-success">操作時間縮減 70%</span>，並於 2025 台灣創新技術博覽會展出。曾與 Dell、Nokia、NVIDIA 等業界夥伴共同撰寫 O-RAN 綠色通訊研究報告。
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience">
-            <h2>工作經歷</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024年8月 - 至今</div>
-                    <h3>副研究員</h3>
-                    <p class="company">工業技術研究院 資訊與通訊研究所 - 新竹</p>
-                    <ul>
-                        <li>低軌衛星專案：帶領與台科大產學合作案，進行衛星網路效能分析</li>
-                        <li>意圖式組網（IBN）：擔任專案負責人，開發 AI 驅動的網路協調解決方案</li>
-                        <li>參展 2025 台灣創新技術博覽會，展示自然語言介面的 IBN Orchestrator</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2022年12月 - 2024年7月</div>
-                    <h3>B5G 研究員 | 實習</h3>
-                    <p class="company">安勤科技股份有限公司 - 台北</p>
-                    <ul>
-                        <li>研究 OTA（空中傳輸）傳輸測量方法</li>
-                        <li>分析 5G 網路系統架構</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2022年9月 - 2022年12月</div>
-                    <h3>全端工程師 | 實習</h3>
-                    <p class="company">Coretek LLC. - 美國拉斯維加斯</p>
-                    <ul>
-                        <li>整合 Jira、Tempo 和 Slack 到第三方應用程式</li>
-                        <li>建立 SaaS 服務，部署至 Heroku 並整合 AWS EC2 上的 PostgreSQL</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2020年6月 - 2020年10月</div>
-                    <h3>資料分析師 | 實習</h3>
-                    <p class="company">威聯網科技 - 台北</p>
-                    <ul>
-                        <li>負責維護和優化使用容器化 Laravel PHP 的投票系統</li>
-                        <li>使用 Google Analytics 進行數據收集、預處理和點擊率分析</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2020年7月 - 2020年9月</div>
-                    <h3>韌體工程師 | 實習</h3>
-                    <p class="company">芯展科技 - 台北</p>
-                    <ul>
-                        <li>修改裝置核心以建立與系統級晶片 FPGA 的 I2C 和 SPI 連接</li>
-                        <li>使用 Python 的 Locust 工具對系統進行壓力測試</li>
-                    </ul>
+        <section id="experience" class="py-5 bg-light">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-briefcase me-2"></i>工作經歷</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">副研究員</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>工業技術研究院 資訊與通訊研究所</p>
+                                    </div>
+                                    <span class="badge bg-primary">2024年8月 - 至今</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>低軌衛星專案：帶領與台科大產學合作案，進行衛星網路效能分析</li>
+                                    <li>意圖式組網（IBN）：擔任專案負責人，開發 AI 驅動的網路協調解決方案</li>
+                                    <li>參展 2025 台灣創新技術博覽會，展示自然語言介面的 IBN Orchestrator</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">B5G 研究員 | 實習</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>安勤科技股份有限公司</p>
+                                    </div>
+                                    <span class="badge bg-secondary">2022年12月 - 2024年7月</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>研究 OTA（空中傳輸）傳輸測量方法</li>
+                                    <li>分析 5G 網路系統架構</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">全端工程師 | 實習</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>Coretek LLC. - 美國拉斯維加斯</p>
+                                    </div>
+                                    <span class="badge bg-secondary">2022年9月 - 2022年12月</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>整合 Jira、Tempo 和 Slack 到第三方應用程式</li>
+                                    <li>建立 SaaS 服務，部署至 Heroku 並整合 AWS EC2 上的 PostgreSQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">資料分析師 | 實習</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>威聯網科技 - 台北</p>
+                                    </div>
+                                    <span class="badge bg-secondary">2020年6月 - 2020年10月</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>負責維護和優化使用容器化 Laravel PHP 的投票系統</li>
+                                    <li>使用 Google Analytics 進行數據收集、預處理和點擊率分析</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">韌體工程師 | 實習</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>芯展科技 - 台北</p>
+                                    </div>
+                                    <span class="badge bg-secondary">2020年7月 - 2020年9月</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>修改裝置核心以建立與系統級晶片 FPGA 的 I2C 和 SPI 連接</li>
+                                    <li>使用 Python 的 Locust 工具對系統進行壓力測試</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects">
-            <h2>專案經歷</h2>
-            <div class="project-grid">
-                <div class="project-card featured">
-                    <div class="project-badge">重點專案</div>
-                    <h3>意圖式組網解決方案（IBN）</h3>
-                    <p class="project-date">2024年8月 - 至今</p>
-                    <p class="project-org">工業技術研究院</p>
-                    <h4>專案亮點：</h4>
-                    <ul>
-                        <li>擔任台灣首套意圖式組網解決方案專案負責人</li>
-                        <li>IBN Orchestrator：結合生成式 AI 的自然語言網路管理介面</li>
-                        <li>參展 <a href="https://tie.twtm.com.tw/zh-tw/exhibition-detail/5207" target="_blank">2025 台灣創新技術博覽會</a></li>
-                        <li>透過 AI 自動化達成網路操作時間縮減 70%</li>
-                    </ul>
-                    <h4>技術堆疊：</h4>
-                    <div class="tech-tags">
-                        <span>5G/6G</span><span>生成式 AI</span><span>AI Agent</span><span>Agentic AI</span>
-                        <span>自然語言處理</span><span>網路協調</span><span>意圖式組網</span>
+        <section id="projects" class="py-5">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-folder me-2"></i>專案經歷</h2>
+
+                <div class="row g-4">
+                    <!-- IBN Project - Featured -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 border-0 shadow project-card featured-project">
+                            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-star-fill me-2"></i>重點專案</span>
+                                <span class="badge bg-light text-primary">2024年8月 - 至今</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">意圖式組網解決方案（IBN）</h5>
+                                <p class="text-muted small"><i class="bi bi-building me-1"></i>工業技術研究院</p>
+                                <ul class="small">
+                                    <li>擔任台灣首套意圖式組網解決方案專案負責人</li>
+                                    <li>IBN Orchestrator：結合生成式 AI 的自然語言網路管理介面</li>
+                                    <li>參展 <a href="https://tie.twtm.com.tw/zh-tw/exhibition-detail/5207" target="_blank" class="text-decoration-none">2025 台灣創新技術博覽會</a></li>
+                                    <li><strong class="text-success">透過 AI 自動化達成網路操作時間縮減 70%</strong></li>
+                                </ul>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary me-1">5G/6G</span>
+                                    <span class="badge bg-info me-1">生成式 AI</span>
+                                    <span class="badge bg-success me-1">AI Agent</span>
+                                    <span class="badge bg-warning text-dark me-1">NLP</span>
+                                </div>
+                                <div class="alert alert-secondary py-2 mb-0 small">
+                                    <i class="bi bi-file-earmark-text me-1"></i><strong>專利：</strong>意圖釐清與多源知識整合之意圖式組網運作方法 (2025) - 台、美、日、中
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-patent">
-                        <strong>專利：</strong>「意圖釐清與多源知識整合之意圖式組網運作方法」(2025) - 台、美、日、中
+
+                    <!-- 6G AI/ML Platform - Featured -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 border-0 shadow project-card featured-project">
+                            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-star-fill me-2"></i>重點專案</span>
+                                <span class="badge bg-light text-primary">2022年9月 - 至今</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">6G AI/ML 平台</h5>
+                                <p class="text-muted small"><i class="bi bi-building me-1"></i>國家科學及技術委員會 (NSTC)</p>
+                                <ul class="small">
+                                    <li>EuCNC，比利時（2024年6月）：展示基於 5G 核心網路和 srsRAN 的 AR/VR 應用</li>
+                                    <li>COSCUP 2023：發表開發的 AI/ML 平台概念</li>
+                                    <li>帶領團隊從零開始開發永續 AI/ML 平台</li>
+                                </ul>
+                                <div class="mb-3">
+                                    <span class="badge bg-danger me-1">O-RAN</span>
+                                    <span class="badge bg-info me-1">Kubernetes</span>
+                                    <span class="badge bg-secondary me-1">KubeFlow</span>
+                                    <span class="badge bg-dark me-1">FastAPI</span>
+                                </div>
+                                <div class="alert alert-secondary py-2 mb-0 small">
+                                    <i class="bi bi-file-earmark-text me-1"></i><strong>專利：</strong>應用於AI-RAN之跨平台資源協調系統及方法 (2025) - 台、美
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <h3>低軌衛星網路效能分析</h3>
-                    <p class="project-date">2024年8月 - 2025年5月</p>
-                    <p class="project-org">工業技術研究院</p>
-                    <h4>專案亮點：</h4>
-                    <ul>
-                        <li>帶領與國立台灣科技大學產學合作案</li>
-                        <li>衛星網路模擬與效能分析</li>
-                        <li>低軌衛星通訊系統研究</li>
-                    </ul>
-                    <h4>技術堆疊：</h4>
-                    <div class="tech-tags">
-                        <span>低軌衛星</span><span>網路模擬</span><span>效能分析</span>
-                        <span>衛星通訊</span>
+
+                    <!-- LEO Satellite -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title mb-0">低軌衛星網路效能分析</h6>
+                                    <span class="badge bg-secondary">2024-2025</span>
+                                </div>
+                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>工研院</p>
+                                <ul class="small mb-2">
+                                    <li>帶領與國立台灣科技大學產學合作案</li>
+                                    <li>衛星網路模擬與效能分析</li>
+                                </ul>
+                                <span class="badge bg-light text-dark me-1">低軌衛星</span>
+                                <span class="badge bg-light text-dark">網路模擬</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card featured">
-                    <div class="project-badge">重點專案</div>
-                    <h3>6G AI/ML 平台</h3>
-                    <p class="project-date">2022年9月 - 至今</p>
-                    <p class="project-org">國家科學及技術委員會 (NSTC)</p>
-                    <h4>專案亮點：</h4>
-                    <ul>
-                        <li>EuCNC，比利時（2024年6月）：展示基於 5G 核心網路和 srsRAN 的 AR/VR 應用</li>
-                        <li>COSCUP 開源人年會（2023年7月）：發表開發的 AI/ML 平台概念</li>
-                        <li>平台開發：帶領團隊從零開始開發永續 AI/ML 平台</li>
-                    </ul>
-                    <h4>技術堆疊：</h4>
-                    <div class="tech-tags">
-                        <span>O-RAN</span><span>Docker</span><span>Kubernetes</span><span>KubeFlow</span>
-                        <span>Kafka</span><span>Kong</span><span>Next.js</span><span>Django</span><span>FastAPI</span>
+
+                    <!-- Gesture Recognition -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title mb-0">AI/ML 手勢辨識</h6>
+                                    <span class="badge bg-secondary">2021-2022</span>
+                                </div>
+                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>全科綜電</p>
+                                <ul class="small mb-2">
+                                    <li>準確率：<strong>99.75%</strong></li>
+                                    <li>邊緣裝置部署</li>
+                                </ul>
+                                <span class="badge bg-light text-dark me-1">TensorFlow</span>
+                                <span class="badge bg-light text-dark me-1">CNN-LSTM</span>
+                                <span class="badge bg-light text-dark">FMCW 雷達</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-patent">
-                        <strong>專利：</strong>「應用於AI-RAN之跨平台資源協調系統及方法」(2025) - 台、美
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>邊緣裝置上的 AI/ML 手勢辨識</h3>
-                    <p class="project-date">2021年9月 - 2022年9月</p>
-                    <p class="project-org">全科綜電</p>
-                    <h4>專案亮點：</h4>
-                    <ul>
-                        <li>模型效能：準確率 99.75%、召回率 99.34%、精確率 98.63%</li>
-                        <li>開發跨編譯工具鏈（虛擬機、Docker）和執行環境（Python、C++）</li>
-                        <li>設計圖像辨識系統和用於資料收集標記的 GUI 系統</li>
-                    </ul>
-                    <h4>技術堆疊：</h4>
-                    <div class="tech-tags">
-                        <span>TensorFlow</span><span>TensorFlow Lite</span><span>CNN</span><span>LSTM</span>
-                        <span>60G FMCW 雷達</span><span>PyQt</span><span>OpenCV</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Docker 中的 Android 系統</h3>
-                    <p class="project-date">2021年4月 - 2021年12月</p>
-                    <p class="project-org">芯展科技</p>
-                    <h4>專案亮點：</h4>
-                    <ul>
-                        <li>通過實施 VPN 和使用 Harbor 作為私有映像檔庫來增強網路安全</li>
-                        <li>通過將 Android 系統掛載為 iSCSI 區塊到 ARM 工作節點來解決嵌入式儲存限制</li>
-                        <li>開發行動投影應用程式，實現端到端壓縮傳輸</li>
-                    </ul>
-                    <h4>技術堆疊：</h4>
-                    <div class="tech-tags">
-                        <span>RK3399</span><span>Raspberry Pi</span><span>Kubernetes</span><span>K3s</span>
-                        <span>iSCSI</span><span>Java</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>社群媒體 NLP 情感分析</h3>
-                    <p class="project-date">2020年10月 - 2021年1月</p>
-                    <p class="project-org">芯展科技</p>
-                    <h4>專案亮點：</h4>
-                    <ul>
-                        <li>使用 Google BERT 作為預訓練模型進行微調，達到優於 AWS Comprehend 的結果</li>
-                        <li>參與文字處理，包括符號過濾、句子分割和關鍵字提取</li>
-                        <li>分析和判斷 Facebook 粉絲頁貼文的評論內容</li>
-                    </ul>
-                    <h4>技術堆疊：</h4>
-                    <div class="tech-tags">
-                        <span>Google BERT</span><span>jieba</span><span>AWS EC2</span>
-                        <span>Selenium</span><span>BeautifulSoup4</span>
+
+                    <!-- Android in Docker -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title mb-0">Docker 中的 Android 系統</h6>
+                                    <span class="badge bg-secondary">2021</span>
+                                </div>
+                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>芯展科技</p>
+                                <ul class="small mb-2">
+                                    <li>Harbor 私有映像檔庫 + VPN</li>
+                                    <li>iSCSI 儲存解決方案</li>
+                                </ul>
+                                <span class="badge bg-light text-dark me-1">Kubernetes</span>
+                                <span class="badge bg-light text-dark me-1">K3s</span>
+                                <span class="badge bg-light text-dark">iSCSI</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Publications Section -->
-        <section id="publications">
-            <h2>學術成果</h2>
+        <section id="publications" class="py-5 bg-light">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-journal-text me-2"></i>學術成果</h2>
 
-            <h3 class="subsection-title">期刊與會議論文</h3>
-            <ul class="publications-list">
-                <li class="publication">Lin, S. H., <strong>Jhuang, Y. C.</strong>, Zha, C., Chen, Y. T., & Leu, J. S. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM." <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank">doi:10.1007/978-981-96-6721-5_13</a></li>
-                <li class="publication">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method Based on Multi-Scale Adaptive Dynamic Fusion Strategy." <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank">doi:10.1007/978-981-96-6721-5_3</a></li>
-                <li class="publication"><strong>Jhuang, Y. C.</strong>, Lin, Y. M., Zha, C., Leu, J. S., & Köppen, M. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11), 4260. <a href="https://doi.org/10.3390/s22114260" target="_blank">doi:10.3390/s22114260</a></li>
-            </ul>
-
-            <h3 class="subsection-title">技術報告</h3>
-            <ul class="publications-list">
-                <li class="publication">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]. 貢獻單位：Dell Technologies, Reliance Jio, Nokia, Mavenir, Rakuten, NVIDIA, NTUST. <strong>主要貢獻：第7節 - 節能 AI/ML 平台建置策略。</strong> <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank">PDF</a></li>
-            </ul>
-
-            <h3 class="subsection-title">演講與發表</h3>
-            <ul class="publications-list">
-                <li class="publication"><strong>COSCUP 2024</strong> - 「O-RAN與AI/ML平台的結合：實現AR/VR QoS的智能服務管理與部署」 <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank">YouTube</a></li>
-                <li class="publication"><strong>COSCUP 2023</strong> - 「AI/ML in 5G O-RAN」 <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank">YouTube</a></li>
-            </ul>
-
-            <h3 class="subsection-title">專利（申請中）</h3>
-            <div class="patents-grid">
-                <div class="patent-item">
-                    <p class="patent-name">「意圖釐清與多源知識整合之意圖式組網運作方法」(2025)</p>
-                    <p class="patent-countries"><strong>申請國家：</strong>台灣、美國、日本、中國大陸</p>
-                    <p class="patent-project">專案：IBN</p>
+                <!-- Papers -->
+                <h5 class="mb-3"><i class="bi bi-file-earmark-text me-2"></i>期刊與會議論文</h5>
+                <div class="list-group mb-4">
+                    <div class="list-group-item border-0 shadow-sm mb-2">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="mb-1 small">Lin, S. H., <strong>Jhuang, Y. C.</strong>, et al. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM."</p>
+                            </div>
+                            <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
+                        </div>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm mb-2">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="mb-1 small">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method."</p>
+                            </div>
+                            <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
+                        </div>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm mb-2">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="mb-1 small"><strong>Jhuang, Y. C.</strong>, et al. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11).</p>
+                            </div>
+                            <a href="https://doi.org/10.3390/s22114260" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="patent-item">
-                    <p class="patent-name">「應用於AI-RAN之跨平台資源協調系統及方法」(2025)</p>
-                    <p class="patent-countries"><strong>申請國家：</strong>台灣、美國</p>
-                    <p class="patent-project">專案：6G AI/ML 平台</p>
+
+                <!-- Technical Reports -->
+                <h5 class="mb-3"><i class="bi bi-file-text me-2"></i>技術報告</h5>
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start">
+                            <span class="badge bg-danger me-3">O-RAN</span>
+                            <div>
+                                <p class="mb-1 small">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]</p>
+                                <p class="mb-0 small text-muted"><strong>主要貢獻：</strong>第7節 - 節能 AI/ML 平台建置策略</p>
+                                <p class="mb-0 small text-muted">貢獻單位：Dell, Nokia, Mavenir, Rakuten, NVIDIA, NTUST</p>
+                            </div>
+                            <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank" class="btn btn-outline-danger btn-sm ms-auto">PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Talks -->
+                <h5 class="mb-3"><i class="bi bi-mic me-2"></i>演講與發表</h5>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-warning text-dark me-2">COSCUP 2024</span>
+                                    <span class="small">O-RAN + AI/ML 平台 AR/VR QoS</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-warning text-dark me-2">COSCUP 2023</span>
+                                    <span class="small">AI/ML in 5G O-RAN</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patents -->
+                <h5 class="mb-3"><i class="bi bi-shield-check me-2"></i>專利（申請中）</h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card border-start border-primary border-4 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="card-title small">意圖釐清與多源知識整合之意圖式組網運作方法 (2025)</h6>
+                                <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1"></i>台灣、美國、日本、中國大陸</p>
+                                <span class="badge bg-primary">專案：IBN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-start border-info border-4 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="card-title small">應用於AI-RAN之跨平台資源協調系統及方法 (2025)</h6>
+                                <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1"></i>台灣、美國</p>
+                                <span class="badge bg-info">專案：6G AI/ML 平台</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Education Section -->
-        <section id="education">
-            <h2>學歷與獎項</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>電子與資訊工程博士</h3>
-                    <p class="school">國立台灣科技大學</p>
-                    <p class="date">2020年9月 - 至今</p>
-                </div>
-                <div class="education-card">
-                    <h3>電子與資訊工程碩士</h3>
-                    <p class="school">國立台灣科技大學</p>
-                    <p class="date">2019年9月 - 2020年9月（逕升博士班）</p>
-                </div>
-                <div class="education-card">
-                    <h3>電子與資訊工程學士</h3>
-                    <p class="school">國立台灣科技大學</p>
-                    <p class="date">2015年9月 - 2019年7月</p>
-                </div>
-            </div>
+        <section id="education" class="py-5">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-award me-2"></i>學歷與獎項</h2>
 
-            <h3 class="subsection-title">獎項與榮譽</h3>
-            <ul class="awards-list">
-                <li><strong>113年度斐陶斐榮譽學會會員</strong> - 2024年</li>
-                <li><strong>112學年度台科大校園傑出青年</strong> - 2023年12月</li>
-                <li><strong>112學年度電資學院傑出青年</strong> - 2023年12月</li>
-                <li><strong>110學年度創新創業教育計畫 - 佳作</strong> - 2022年<br><span class="award-detail">「US社群平台」團隊 - 開關公司與募資實戰競賽</span></li>
-            </ul>
+                <!-- Education -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <div class="card border-top border-primary border-4 shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-mortarboard fs-2 text-primary mb-2"></i>
+                                <h6>電子與資訊工程博士</h6>
+                                <p class="small text-muted mb-1">國立台灣科技大學</p>
+                                <span class="badge bg-primary">2020年9月 - 至今</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-top border-secondary border-4 shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-mortarboard fs-2 text-secondary mb-2"></i>
+                                <h6>電子與資訊工程碩士</h6>
+                                <p class="small text-muted mb-1">台科大（逕升博士班）</p>
+                                <span class="badge bg-secondary">2019年9月 - 2020年9月</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-top border-secondary border-4 shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-mortarboard fs-2 text-secondary mb-2"></i>
+                                <h6>電子與資訊工程學士</h6>
+                                <p class="small text-muted mb-1">國立台灣科技大學</p>
+                                <span class="badge bg-secondary">2015年9月 - 2019年7月</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <h3 class="subsection-title">技能</h3>
-            <div class="skills-compact">
-                <div class="skill-category">
-                    <strong>系統架構：</strong>B5G/6G、雲端基礎設施、微服務、邊緣運算
+                <!-- Awards -->
+                <h5 class="mb-3"><i class="bi bi-trophy me-2"></i>獎項與榮譽</h5>
+                <div class="list-group mb-4">
+                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
+                        <span class="badge bg-warning text-dark me-3">2024</span>
+                        <span>113年度斐陶斐榮譽學會會員</span>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
+                        <span class="badge bg-info me-3">2023</span>
+                        <span>112學年度台科大校園傑出青年</span>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
+                        <span class="badge bg-info me-3">2023</span>
+                        <span>112學年度電資學院傑出青年</span>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
+                        <span class="badge bg-secondary me-3">2022</span>
+                        <span>110學年度創新創業教育計畫 - 佳作</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <strong>方法論：</strong>永續架構設計、4+1 架構視圖模型、DevOps、MLOps
-                </div>
-                <div class="skill-category">
-                    <strong>軟體：</strong>後端開發、AI/ML、資料分析、前端開發
-                </div>
-                <div class="skill-category">
-                    <strong>韌體：</strong>嵌入式 AI 裝置、FMCW 雷達系統
-                </div>
-                <div class="skill-category">
-                    <strong>程式語言：</strong>Python, Go, C, C++, Java, Javascript, PHP
+
+                <!-- Skills -->
+                <h5 class="mb-3"><i class="bi bi-tools me-2"></i>技能</h5>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary"><i class="bi bi-diagram-3 me-2"></i>系統架構</h6>
+                                <p class="small mb-0">B5G/6G、雲端基礎設施、微服務、邊緣運算</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary"><i class="bi bi-gear me-2"></i>方法論</h6>
+                                <p class="small mb-0">永續架構設計、4+1 架構視圖模型、DevOps、MLOps</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary"><i class="bi bi-code-slash me-2"></i>程式語言</h6>
+                                <p class="small mb-0">Python, Go, C/C++, Java, JavaScript, PHP</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <footer>
-            <p>&copy; 2025 莊雨樵. All rights reserved.</p>
+        <!-- Footer -->
+        <footer class="bg-primary text-white text-center py-4">
+            <p class="mb-0">&copy; 2025 莊雨樵. All rights reserved.</p>
         </footer>
     </main>
 
-    <script src="js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

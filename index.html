@@ -7,344 +7,610 @@
     <meta property="og:title" content="Yu-Chiao Jhuang | 莊雨樵">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jych1a0.github.io/">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <aside class="sidebar">
-        <div class="sidebar-content">
-            <img src="images/profile.jpg" alt="Yu-Chiao Jhuang" class="profile-photo">
-            <h1>Yu-Chiao Jhuang</h1>
-            <p class="subtitle">莊雨樵</p>
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
+    <!-- Mobile Navbar -->
+    <nav class="navbar navbar-dark bg-primary d-lg-none fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Yu-Chiao Jhuang</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
 
-            <div class="sidebar-section">
-                <p class="tagline">Specializing in <strong>Intent-Based Networking</strong></p>
+    <!-- Mobile Offcanvas Sidebar -->
+    <div class="offcanvas offcanvas-start bg-primary text-white d-lg-none" tabindex="-1" id="mobileSidebar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body text-center">
+            <img src="images/profile.jpg" alt="Yu-Chiao Jhuang" class="rounded-circle mb-3" width="120" height="120">
+            <h5>Yu-Chiao Jhuang</h5>
+            <p class="text-white-50">莊雨樵</p>
+            <nav class="nav flex-column">
+                <a class="nav-link text-white" href="#highlights" data-bs-dismiss="offcanvas">Highlights</a>
+                <a class="nav-link text-white" href="#about" data-bs-dismiss="offcanvas">About</a>
+                <a class="nav-link text-white" href="#experience" data-bs-dismiss="offcanvas">Experience</a>
+                <a class="nav-link text-white" href="#projects" data-bs-dismiss="offcanvas">Projects</a>
+                <a class="nav-link text-white" href="#publications" data-bs-dismiss="offcanvas">Publications</a>
+                <a class="nav-link text-white" href="#education" data-bs-dismiss="offcanvas">Education</a>
+            </nav>
+            <hr class="my-3 opacity-25">
+            <a href="zh.html" class="btn btn-outline-light btn-sm">中文</a>
+        </div>
+    </div>
+
+    <!-- Desktop Sidebar -->
+    <aside class="sidebar d-none d-lg-flex flex-column bg-primary text-white">
+        <div class="sidebar-content p-4 text-center">
+            <img src="images/profile.jpg" alt="Yu-Chiao Jhuang" class="rounded-circle border border-3 border-white shadow mb-3 profile-photo">
+            <h4 class="fw-bold mb-1">Yu-Chiao Jhuang</h4>
+            <p class="text-white-50 mb-3">莊雨樵</p>
+
+            <div class="mb-3">
+                <p class="small mb-0">Specializing in</p>
+                <span class="badge bg-info fs-6">Intent-Based Networking</span>
             </div>
 
-            <div class="sidebar-section">
-                <p class="affiliation"><span class="label">Ph.D. Candidate</span><br>NTUST</p>
-                <p class="affiliation"><span class="label">Associate Research Engineer</span><br>ITRI</p>
+            <div class="mb-3 small">
+                <p class="mb-1"><i class="bi bi-mortarboard me-1"></i> Ph.D. Candidate, NTUST</p>
+                <p class="mb-0"><i class="bi bi-building me-1"></i> Research Engineer, ITRI</p>
             </div>
 
-            <div class="sidebar-section">
-                <a href="mailto:so.jych1a0@gmail.com" class="contact-link">so.jych1a0@gmail.com</a>
-                <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank" class="contact-link">LinkedIn</a>
-                <a href="JYC_Resume.pdf" class="btn-download" download>Download Resume</a>
+            <div class="mb-3">
+                <a href="mailto:so.jych1a0@gmail.com" class="d-block text-white-50 text-decoration-none small mb-1">
+                    <i class="bi bi-envelope me-1"></i> so.jych1a0@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/yu-chiao-jhaung-644821163" target="_blank" class="d-block text-white-50 text-decoration-none small">
+                    <i class="bi bi-linkedin me-1"></i> LinkedIn
+                </a>
             </div>
 
-            <nav class="sidebar-nav">
-                <a href="#highlights">Highlights</a>
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#publications">Publications</a>
-                <a href="#education">Education</a>
+            <a href="JYC_Resume.pdf" class="btn btn-info btn-sm mb-4" download>
+                <i class="bi bi-download me-1"></i> Download Resume
+            </a>
+
+            <nav id="sidebar-nav" class="nav flex-column text-start">
+                <a class="nav-link text-white py-2" href="#highlights"><i class="bi bi-star me-2"></i>Highlights</a>
+                <a class="nav-link text-white py-2" href="#about"><i class="bi bi-person me-2"></i>About</a>
+                <a class="nav-link text-white py-2" href="#experience"><i class="bi bi-briefcase me-2"></i>Experience</a>
+                <a class="nav-link text-white py-2" href="#projects"><i class="bi bi-folder me-2"></i>Projects</a>
+                <a class="nav-link text-white py-2" href="#publications"><i class="bi bi-journal-text me-2"></i>Publications</a>
+                <a class="nav-link text-white py-2" href="#education"><i class="bi bi-award me-2"></i>Education</a>
             </nav>
 
-            <div class="lang-switch">
-                <a href="zh.html">中文</a>
-            </div>
+            <hr class="my-3 opacity-25">
+            <a href="zh.html" class="btn btn-outline-light btn-sm"><i class="bi bi-translate me-1"></i> 中文</a>
         </div>
     </aside>
 
+    <!-- Main Content -->
     <main class="main-content">
         <!-- Highlights Section -->
-        <section id="highlights" class="highlights-section">
-            <div class="highlights-grid">
-                <div class="highlight-card primary">
-                    <span class="highlight-icon">🎯</span>
-                    <span class="highlight-label">Research Focus</span>
-                    <span class="highlight-value">Intent-Based Networking</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">70%</span>
-                    <span class="highlight-label">Operation Time Reduced</span>
-                    <span class="highlight-detail">via AI Automation</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">2</span>
-                    <span class="highlight-label">Patents Pending</span>
-                    <span class="highlight-detail">TW, US, JP, CN</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">3</span>
-                    <span class="highlight-label">Publications</span>
-                    <span class="highlight-detail">SCI / Springer</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">2</span>
-                    <span class="highlight-label">Conference Talks</span>
-                    <span class="highlight-detail">COSCUP 2023, 2024</span>
-                </div>
-                <div class="highlight-card">
-                    <span class="highlight-number">1</span>
-                    <span class="highlight-label">O-RAN Report</span>
-                    <span class="highlight-detail">w/ Dell, Nokia, NVIDIA</span>
+        <section id="highlights" class="py-5 bg-light">
+            <div class="container-fluid px-4">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card primary-card">
+                            <div class="card-body text-center text-white">
+                                <i class="bi bi-bullseye fs-1 mb-2"></i>
+                                <p class="small mb-1 opacity-75">Research Focus</p>
+                                <h5 class="fw-bold mb-0">Intent-Based Networking</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">70%</h2>
+                                <p class="small text-muted mb-1">Operation Time Reduced</p>
+                                <span class="badge bg-success">AI Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">2</h2>
+                                <p class="small text-muted mb-1">Patents Pending</p>
+                                <span class="badge bg-secondary">TW, US, JP, CN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">3</h2>
+                                <p class="small text-muted mb-1">Publications</p>
+                                <span class="badge bg-info">SCI / Springer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">2</h2>
+                                <p class="small text-muted mb-1">Conference Talks</p>
+                                <span class="badge bg-warning text-dark">COSCUP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-xl-4">
+                        <div class="card h-100 border-0 shadow-sm highlight-card">
+                            <div class="card-body text-center">
+                                <h2 class="display-5 fw-bold text-primary mb-0">1</h2>
+                                <p class="small text-muted mb-1">O-RAN Research Report</p>
+                                <span class="badge bg-dark">Dell, Nokia, NVIDIA</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about">
-            <h2>About</h2>
-            <p>Ph.D. candidate at NTUST, currently at ITRI. My research focuses on <strong>Intent-Based Networking</strong>, exploring how natural language and AI can simplify network operations. Background spans wireless communications, AI/ML systems, cloud platforms, and embedded development. Recent work on IBN achieved <strong>70% reduction in operation time</strong> through AI automation, presented at Taiwan Innotech Expo 2025. Co-authored O-RAN green communication research report with industry partners including Dell, Nokia, and NVIDIA.</p>
+        <section id="about" class="py-5">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-person-circle me-2"></i>About</h2>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <p class="lead mb-0">
+                            Ph.D. candidate at NTUST, currently at ITRI. My research focuses on <strong class="text-primary">Intent-Based Networking</strong>, exploring how natural language and AI can simplify network operations. Background spans wireless communications, AI/ML systems, cloud platforms, and embedded development. Recent work on IBN achieved <span class="badge bg-success">70% reduction in operation time</span> through AI automation, presented at Taiwan Innotech Expo 2025. Co-authored O-RAN green communication research report with industry partners including Dell, Nokia, and NVIDIA.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Experience Section -->
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug 2024 - Present</div>
-                    <h3>Associate Research Engineer</h3>
-                    <p class="company">Industrial Technology Research Institute (ITRI) - Hsinchu, Taiwan</p>
-                    <ul>
-                        <li>LEO Satellite Project: Led industry-academia collaboration with NTUST on satellite network performance analysis</li>
-                        <li>Intent-Based Networking (IBN): Project Manager for AI-powered network orchestration solution</li>
-                        <li>Exhibited at Taiwan Innotech Expo 2025, demonstrating IBN Orchestrator with natural language interface</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Dec 2022 - Jul 2024</div>
-                    <h3>B5G Researcher | Internship</h3>
-                    <p class="company">ONYX Healthcare Inc. - Taiwan, Taipei</p>
-                    <ul>
-                        <li>Research on OTA (Over-The-Air) transmission measurement methods</li>
-                        <li>Analysis of 5G network system architecture</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Sep 2022 - Dec 2022</div>
-                    <h3>Full-Stack Engineer | Internship</h3>
-                    <p class="company">Coretek LLC. - United States, Las Vegas</p>
-                    <ul>
-                        <li>Integration of Jira, Tempo, and Slack into a third-party application</li>
-                        <li>Established a SaaS by deploying to Heroku and integrating with PostgreSQL on AWS EC2</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Jun 2020 - Oct 2020</div>
-                    <h3>Data Analyst | Internship</h3>
-                    <p class="company">Wavenet Technology - Taiwan, Taipei</p>
-                    <ul>
-                        <li>Responsible for maintaining and optimizing a voting system using containerized Laravel PHP</li>
-                        <li>Utilized Google Analytics for data collection, preprocessing, and analysis of click-through rates</li>
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Jul 2020 - Sep 2020</div>
-                    <h3>Firmware Engineer | Internship</h3>
-                    <p class="company">Silicon XPandas - Taiwan, Taipei</p>
-                    <ul>
-                        <li>Modified the kernel of a device to establish I2C and SPI connections with System-on-Chips FPGA</li>
-                        <li>Employed Python's Locust tool to conduct stress tests on the system</li>
-                    </ul>
+        <section id="experience" class="py-5 bg-light">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-briefcase me-2"></i>Experience</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">Associate Research Engineer</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>Industrial Technology Research Institute (ITRI)</p>
+                                    </div>
+                                    <span class="badge bg-primary">Aug 2024 - Present</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>LEO Satellite Project: Led industry-academia collaboration with NTUST on satellite network performance analysis</li>
+                                    <li>Intent-Based Networking (IBN): Project Manager for AI-powered network orchestration solution</li>
+                                    <li>Exhibited at Taiwan Innotech Expo 2025, demonstrating IBN Orchestrator with natural language interface</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">B5G Researcher | Internship</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>ONYX Healthcare Inc.</p>
+                                    </div>
+                                    <span class="badge bg-secondary">Dec 2022 - Jul 2024</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>Research on OTA (Over-The-Air) transmission measurement methods</li>
+                                    <li>Analysis of 5G network system architecture</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">Full-Stack Engineer | Internship</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>Coretek LLC. - Las Vegas, USA</p>
+                                    </div>
+                                    <span class="badge bg-secondary">Sep 2022 - Dec 2022</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>Integration of Jira, Tempo, and Slack into a third-party application</li>
+                                    <li>Established a SaaS by deploying to Heroku and integrating with PostgreSQL on AWS EC2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">Data Analyst | Internship</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>Wavenet Technology - Taipei</p>
+                                    </div>
+                                    <span class="badge bg-secondary">Jun 2020 - Oct 2020</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>Maintained and optimized a voting system using containerized Laravel PHP</li>
+                                    <li>Google Analytics for data collection, preprocessing, and click-through rate analysis</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <h5 class="card-title mb-1">Firmware Engineer | Internship</h5>
+                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>Silicon XPandas - Taipei</p>
+                                    </div>
+                                    <span class="badge bg-secondary">Jul 2020 - Sep 2020</span>
+                                </div>
+                                <ul class="mb-0">
+                                    <li>Modified device kernel to establish I2C and SPI connections with System-on-Chips FPGA</li>
+                                    <li>Employed Python's Locust tool to conduct stress tests on the system</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card featured">
-                    <div class="project-badge">Featured</div>
-                    <h3>Intent-Based Networking Solution (IBN)</h3>
-                    <p class="project-date">Aug 2024 - Present</p>
-                    <p class="project-org">Industrial Technology Research Institute (ITRI)</p>
-                    <h4>Highlights:</h4>
-                    <ul>
-                        <li>Project Manager for Taiwan's first intent-based networking solution</li>
-                        <li>IBN Orchestrator: Natural language interface with Generative AI for network management</li>
-                        <li>Exhibited at <a href="https://tie.twtm.com.tw/zh-tw/exhibition-detail/5207" target="_blank">Taiwan Innotech Expo 2025</a></li>
-                        <li>Achieved 70% reduction in network operation time through AI automation</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <div class="tech-tags">
-                        <span>5G/6G</span><span>Generative AI</span><span>AI Agent</span><span>Agentic AI</span>
-                        <span>NLP</span><span>Network Orchestration</span><span>Intent-Based Networking</span>
+        <section id="projects" class="py-5">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-folder me-2"></i>Projects</h2>
+
+                <div class="row g-4">
+                    <!-- IBN Project - Featured -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 border-0 shadow project-card featured-project">
+                            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-star-fill me-2"></i>Featured Project</span>
+                                <span class="badge bg-light text-primary">Aug 2024 - Present</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Intent-Based Networking Solution (IBN)</h5>
+                                <p class="text-muted small"><i class="bi bi-building me-1"></i>Industrial Technology Research Institute (ITRI)</p>
+                                <ul class="small">
+                                    <li>Project Manager for Taiwan's first intent-based networking solution</li>
+                                    <li>IBN Orchestrator: Natural language interface with Generative AI</li>
+                                    <li>Exhibited at <a href="https://tie.twtm.com.tw/zh-tw/exhibition-detail/5207" target="_blank" class="text-decoration-none">Taiwan Innotech Expo 2025</a></li>
+                                    <li><strong class="text-success">70% reduction in network operation time</strong></li>
+                                </ul>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary me-1">5G/6G</span>
+                                    <span class="badge bg-info me-1">Generative AI</span>
+                                    <span class="badge bg-success me-1">AI Agent</span>
+                                    <span class="badge bg-warning text-dark me-1">NLP</span>
+                                </div>
+                                <div class="alert alert-secondary py-2 mb-0 small">
+                                    <i class="bi bi-file-earmark-text me-1"></i><strong>Patent:</strong> Intent Clarification and Multi-Source Knowledge Integration (2025) - TW, US, JP, CN
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-patent">
-                        <strong>Patent:</strong> 「意圖釐清與多源知識整合之意圖式組網運作方法」(2025) - TW, US, JP, CN
+
+                    <!-- 6G AI/ML Platform - Featured -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 border-0 shadow project-card featured-project">
+                            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-star-fill me-2"></i>Featured Project</span>
+                                <span class="badge bg-light text-primary">Sep 2022 - Present</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">6G AI/ML Platform</h5>
+                                <p class="text-muted small"><i class="bi bi-building me-1"></i>National Science and Technology Council (NSTC)</p>
+                                <ul class="small">
+                                    <li>EuCNC, Belgium (June 2024): AR/VR demo based on 5G Core & srsRAN</li>
+                                    <li>COSCUP 2023: Presented the AI/ML platform concept</li>
+                                    <li>Led team to develop sustainable AI/ML platform from scratch</li>
+                                </ul>
+                                <div class="mb-3">
+                                    <span class="badge bg-danger me-1">O-RAN</span>
+                                    <span class="badge bg-info me-1">Kubernetes</span>
+                                    <span class="badge bg-secondary me-1">KubeFlow</span>
+                                    <span class="badge bg-dark me-1">FastAPI</span>
+                                </div>
+                                <div class="alert alert-secondary py-2 mb-0 small">
+                                    <i class="bi bi-file-earmark-text me-1"></i><strong>Patent:</strong> Cross-Platform Resource Coordination for AI-RAN (2025) - TW, US
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <h3>LEO Satellite Network Performance Analysis</h3>
-                    <p class="project-date">Aug 2024 - May 2025</p>
-                    <p class="project-org">Industrial Technology Research Institute (ITRI)</p>
-                    <h4>Highlights:</h4>
-                    <ul>
-                        <li>Led industry-academia collaboration with National Taiwan University of Science and Technology</li>
-                        <li>Satellite network simulation and performance analysis</li>
-                        <li>Research on LEO satellite communication systems</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <div class="tech-tags">
-                        <span>LEO Satellite</span><span>Network Simulation</span><span>Performance Analysis</span>
-                        <span>Satellite Communication</span>
+
+                    <!-- LEO Satellite -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title mb-0">LEO Satellite Network Analysis</h6>
+                                    <span class="badge bg-secondary">2024-2025</span>
+                                </div>
+                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>ITRI</p>
+                                <ul class="small mb-2">
+                                    <li>Industry-academia collaboration with NTUST</li>
+                                    <li>Satellite network simulation & analysis</li>
+                                </ul>
+                                <span class="badge bg-light text-dark me-1">LEO Satellite</span>
+                                <span class="badge bg-light text-dark">Network Simulation</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card featured">
-                    <div class="project-badge">Featured</div>
-                    <h3>6G AI/ML Platform</h3>
-                    <p class="project-date">Sep 2022 - Present</p>
-                    <p class="project-org">National Science and Technology Council (NSTC)</p>
-                    <h4>Highlights:</h4>
-                    <ul>
-                        <li>EuCNC, Belgium (June 2024): Demonstrating AR/VR applications based on the 5G Core Network and srsRAN</li>
-                        <li>COSCUP Conference (July 2023): Presented the concept of the developed AI/ML platform</li>
-                        <li>Platform Development: Led the team in developing a sustainable AI/ML platform from scratch</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <div class="tech-tags">
-                        <span>O-RAN</span><span>Docker</span><span>Kubernetes</span><span>KubeFlow</span>
-                        <span>Kafka</span><span>Kong</span><span>Next.js</span><span>Django</span><span>FastAPI</span>
+
+                    <!-- Gesture Recognition -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title mb-0">AI/ML Gesture Recognition</h6>
+                                    <span class="badge bg-secondary">2021-2022</span>
+                                </div>
+                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>Alltek Technology</p>
+                                <ul class="small mb-2">
+                                    <li>Accuracy: <strong>99.75%</strong></li>
+                                    <li>Edge device deployment</li>
+                                </ul>
+                                <span class="badge bg-light text-dark me-1">TensorFlow</span>
+                                <span class="badge bg-light text-dark me-1">CNN-LSTM</span>
+                                <span class="badge bg-light text-dark">FMCW Radar</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-patent">
-                        <strong>Patent:</strong> 「應用於AI-RAN之跨平台資源協調系統及方法」(2025) - TW, US
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>AI/ML-based Gesture Recognition on Edge Devices</h3>
-                    <p class="project-date">Sep 2021 - Sep 2022</p>
-                    <p class="project-org">Alltek Technology Corp.</p>
-                    <h4>Highlights:</h4>
-                    <ul>
-                        <li>Model Performance: Accuracy: 99.75%, Recall: 99.34%, Precision: 98.63%</li>
-                        <li>Developed a cross-compilation toolchain (Virtual Machine, Docker) and runtime (Python, C++)</li>
-                        <li>Designed an image recognition system and a GUI system for data collection and labeling</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <div class="tech-tags">
-                        <span>TensorFlow</span><span>TensorFlow Lite</span><span>CNN</span><span>LSTM</span>
-                        <span>60G FMCW Radar</span><span>PyQt</span><span>OpenCV</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Android in Docker</h3>
-                    <p class="project-date">Apr 2021 - Dec 2021</p>
-                    <p class="project-org">Silicon XPandas</p>
-                    <h4>Highlights:</h4>
-                    <ul>
-                        <li>Enhanced network security by implementing a VPN and utilizing Harbor as a private image registry</li>
-                        <li>Addressed embedded storage limitations by mounting the Android system as an iSCSI block to ARM work nodes</li>
-                        <li>Developed a mobile projection application, achieving end-to-end compression transmission</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <div class="tech-tags">
-                        <span>RK3399</span><span>Raspberry Pi</span><span>Kubernetes</span><span>K3s</span>
-                        <span>iSCSI</span><span>Java</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Sentiment Analysis based on NLP in Social Media</h3>
-                    <p class="project-date">Oct 2020 - Jan 2021</p>
-                    <p class="project-org">Silicon XPandas</p>
-                    <h4>Highlights:</h4>
-                    <ul>
-                        <li>Utilized Google BERT as a pre-trained model for fine-tuning, achieving better results than AWS Comprehend</li>
-                        <li>Involved in word processing including symbol filtering, sentence segmentation, and keyword extraction</li>
-                        <li>Analyzed and determined the content of comments on Facebook fan page posts</li>
-                    </ul>
-                    <h4>Tech Stack:</h4>
-                    <div class="tech-tags">
-                        <span>Google BERT</span><span>jieba</span><span>AWS EC2</span>
-                        <span>Selenium</span><span>BeautifulSoup4</span>
+
+                    <!-- Android in Docker -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm project-card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title mb-0">Android in Docker</h6>
+                                    <span class="badge bg-secondary">2021</span>
+                                </div>
+                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>Silicon XPandas</p>
+                                <ul class="small mb-2">
+                                    <li>Harbor private registry + VPN</li>
+                                    <li>iSCSI storage for ARM nodes</li>
+                                </ul>
+                                <span class="badge bg-light text-dark me-1">Kubernetes</span>
+                                <span class="badge bg-light text-dark me-1">K3s</span>
+                                <span class="badge bg-light text-dark">iSCSI</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Publications Section -->
-        <section id="publications">
-            <h2>Publications & Research</h2>
+        <section id="publications" class="py-5 bg-light">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-journal-text me-2"></i>Publications & Research</h2>
 
-            <h3 class="subsection-title">Journal & Conference Papers</h3>
-            <ul class="publications-list">
-                <li class="publication">Lin, S. H., <strong>Jhuang, Y. C.</strong>, Zha, C., Chen, Y. T., & Leu, J. S. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM." <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank">doi:10.1007/978-981-96-6721-5_13</a></li>
-                <li class="publication">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method Based on Multi-Scale Adaptive Dynamic Fusion Strategy." <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank">doi:10.1007/978-981-96-6721-5_3</a></li>
-                <li class="publication"><strong>Jhuang, Y. C.</strong>, Lin, Y. M., Zha, C., Leu, J. S., & Köppen, M. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11), 4260. <a href="https://doi.org/10.3390/s22114260" target="_blank">doi:10.3390/s22114260</a></li>
-            </ul>
-
-            <h3 class="subsection-title">Technical Reports</h3>
-            <ul class="publications-list">
-                <li class="publication">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]. Contributors: Dell Technologies, Reliance Jio, Nokia, Mavenir, Rakuten, NVIDIA, NTUST. <strong>Main contribution: Section 7 - Construction strategy for an energy-efficient AI/ML platform.</strong> <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank">PDF</a></li>
-            </ul>
-
-            <h3 class="subsection-title">Talks & Presentations</h3>
-            <ul class="publications-list">
-                <li class="publication"><strong>COSCUP 2024</strong> - "O-RAN與AI/ML平台的結合：實現AR/VR QoS的智能服務管理與部署" <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank">YouTube</a></li>
-                <li class="publication"><strong>COSCUP 2023</strong> - "AI/ML in 5G O-RAN" <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank">YouTube</a></li>
-            </ul>
-
-            <h3 class="subsection-title">Patents (Pending)</h3>
-            <div class="patents-grid">
-                <div class="patent-item">
-                    <p class="patent-name">"Intent Clarification and Multi-Source Knowledge Integration Method for Intent-Based Networking Operation" (2025)</p>
-                    <p class="patent-countries"><strong>Filing Countries:</strong> Taiwan, United States, Japan, China</p>
-                    <p class="patent-project">Project: IBN</p>
+                <!-- Papers -->
+                <h5 class="mb-3"><i class="bi bi-file-earmark-text me-2"></i>Journal & Conference Papers</h5>
+                <div class="list-group mb-4">
+                    <div class="list-group-item border-0 shadow-sm mb-2">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="mb-1 small">Lin, S. H., <strong>Jhuang, Y. C.</strong>, et al. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM."</p>
+                            </div>
+                            <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
+                        </div>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm mb-2">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="mb-1 small">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method."</p>
+                            </div>
+                            <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
+                        </div>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm mb-2">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+                                <p class="mb-1 small"><strong>Jhuang, Y. C.</strong>, et al. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11).</p>
+                            </div>
+                            <a href="https://doi.org/10.3390/s22114260" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="patent-item">
-                    <p class="patent-name">"Cross-Platform Resource Coordination System and Method for AI-RAN" (2025)</p>
-                    <p class="patent-countries"><strong>Filing Countries:</strong> Taiwan, United States</p>
-                    <p class="patent-project">Project: 6G AI/ML Platform</p>
+
+                <!-- Technical Reports -->
+                <h5 class="mb-3"><i class="bi bi-file-text me-2"></i>Technical Reports</h5>
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start">
+                            <span class="badge bg-danger me-3">O-RAN</span>
+                            <div>
+                                <p class="mb-1 small">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]</p>
+                                <p class="mb-0 small text-muted"><strong>Main contribution:</strong> Section 7 - Energy-efficient AI/ML platform construction strategy</p>
+                                <p class="mb-0 small text-muted">Contributors: Dell, Nokia, Mavenir, Rakuten, NVIDIA, NTUST</p>
+                            </div>
+                            <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank" class="btn btn-outline-danger btn-sm ms-auto">PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Talks -->
+                <h5 class="mb-3"><i class="bi bi-mic me-2"></i>Talks & Presentations</h5>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-warning text-dark me-2">COSCUP 2024</span>
+                                    <span class="small">O-RAN + AI/ML Platform for AR/VR QoS</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-warning text-dark me-2">COSCUP 2023</span>
+                                    <span class="small">AI/ML in 5G O-RAN</span>
+                                </div>
+                                <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patents -->
+                <h5 class="mb-3"><i class="bi bi-shield-check me-2"></i>Patents (Pending)</h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card border-start border-primary border-4 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="card-title small">Intent Clarification and Multi-Source Knowledge Integration Method for IBN (2025)</h6>
+                                <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1"></i>Taiwan, United States, Japan, China</p>
+                                <span class="badge bg-primary">Project: IBN</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-start border-info border-4 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="card-title small">Cross-Platform Resource Coordination System and Method for AI-RAN (2025)</h6>
+                                <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1"></i>Taiwan, United States</p>
+                                <span class="badge bg-info">Project: 6G AI/ML Platform</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Education Section -->
-        <section id="education">
-            <h2>Education & Awards</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3>Ph.D. in Electronic and Computer Engineering</h3>
-                    <p class="school">National Taiwan University of Science and Technology</p>
-                    <p class="date">Sep 2020 - Present</p>
-                </div>
-                <div class="education-card">
-                    <h3>Master's in Electronic and Computer Engineering</h3>
-                    <p class="school">National Taiwan University of Science and Technology</p>
-                    <p class="date">Sep 2019 - Sep 2020 (Direct Entry Ph.D. Program)</p>
-                </div>
-                <div class="education-card">
-                    <h3>Bachelor's in Electronic and Computer Engineering</h3>
-                    <p class="school">National Taiwan University of Science and Technology</p>
-                    <p class="date">Sep 2015 - Jul 2019</p>
-                </div>
-            </div>
+        <section id="education" class="py-5">
+            <div class="container-fluid px-4">
+                <h2 class="section-title mb-4"><i class="bi bi-award me-2"></i>Education & Awards</h2>
 
-            <h3 class="subsection-title">Awards & Honors</h3>
-            <ul class="awards-list">
-                <li><strong>Phi Tau Phi Scholastic Honor Society Member</strong> - 2024</li>
-                <li><strong>112th Outstanding Youth on the Campus of NTUST</strong> - Dec 2023</li>
-                <li><strong>112th Outstanding Youth of the ECE, NTUST</strong> - Dec 2023</li>
-                <li><strong>Innovation & Entrepreneurship Program - Honorable Mention</strong> - 2022<br><span class="award-detail">Team "US Social Platform" - Startup Company & Fundraising Competition</span></li>
-            </ul>
+                <!-- Education -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <div class="card border-top border-primary border-4 shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-mortarboard fs-2 text-primary mb-2"></i>
+                                <h6>Ph.D. in ECE</h6>
+                                <p class="small text-muted mb-1">National Taiwan University of Science and Technology</p>
+                                <span class="badge bg-primary">Sep 2020 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-top border-secondary border-4 shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-mortarboard fs-2 text-secondary mb-2"></i>
+                                <h6>Master's in ECE</h6>
+                                <p class="small text-muted mb-1">NTUST (Direct Entry Ph.D.)</p>
+                                <span class="badge bg-secondary">Sep 2019 - Sep 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-top border-secondary border-4 shadow-sm h-100">
+                            <div class="card-body text-center">
+                                <i class="bi bi-mortarboard fs-2 text-secondary mb-2"></i>
+                                <h6>Bachelor's in ECE</h6>
+                                <p class="small text-muted mb-1">NTUST</p>
+                                <span class="badge bg-secondary">Sep 2015 - Jul 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <h3 class="subsection-title">Skills</h3>
-            <div class="skills-compact">
-                <div class="skill-category">
-                    <strong>Architecture:</strong> B5G/6G, Cloud Infrastructure, Microservices, Edge Computing
+                <!-- Awards -->
+                <h5 class="mb-3"><i class="bi bi-trophy me-2"></i>Awards & Honors</h5>
+                <div class="list-group mb-4">
+                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
+                        <span class="badge bg-warning text-dark me-3">2024</span>
+                        <span>Phi Tau Phi Scholastic Honor Society Member</span>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
+                        <span class="badge bg-info me-3">2023</span>
+                        <span>Outstanding Youth on the Campus of NTUST</span>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
+                        <span class="badge bg-info me-3">2023</span>
+                        <span>Outstanding Youth of the ECE, NTUST</span>
+                    </div>
+                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
+                        <span class="badge bg-secondary me-3">2022</span>
+                        <span>Innovation & Entrepreneurship Program - Honorable Mention</span>
+                    </div>
                 </div>
-                <div class="skill-category">
-                    <strong>Methodology:</strong> Sustainable Architecture Design, 4+1 Architectural View Model, DevOps, MLOps
-                </div>
-                <div class="skill-category">
-                    <strong>Software:</strong> Back-End, AI/ML, Data Analysis, Front-End
-                </div>
-                <div class="skill-category">
-                    <strong>Firmware:</strong> Embedded AI Devices, FMCW Radar System
-                </div>
-                <div class="skill-category">
-                    <strong>Languages:</strong> Python, Go, C, C++, Java, Javascript, PHP
+
+                <!-- Skills -->
+                <h5 class="mb-3"><i class="bi bi-tools me-2"></i>Skills</h5>
+                <div class="row g-3">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary"><i class="bi bi-diagram-3 me-2"></i>Architecture</h6>
+                                <p class="small mb-0">B5G/6G, Cloud Infrastructure, Microservices, Edge Computing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary"><i class="bi bi-gear me-2"></i>Methodology</h6>
+                                <p class="small mb-0">Sustainable Architecture, 4+1 View Model, DevOps, MLOps</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h6 class="text-primary"><i class="bi bi-code-slash me-2"></i>Languages</h6>
+                                <p class="small mb-0">Python, Go, C/C++, Java, JavaScript, PHP</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <footer>
-            <p>&copy; 2025 Yu-Chiao Jhuang. All rights reserved.</p>
+        <!-- Footer -->
+        <footer class="bg-primary text-white text-center py-4">
+            <p class="mb-0">&copy; 2025 Yu-Chiao Jhuang. All rights reserved.</p>
         </footer>
     </main>
 
-    <script src="js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
