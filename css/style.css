@@ -57,6 +57,19 @@
 /* Layout: Sidebar + Main Content */
 body {
     background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* Word break for long text */
+h1, h2, h3, h4, h5, h6, p, li, span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Prevent image overflow */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .sidebar {
@@ -72,6 +85,7 @@ body {
 .main-content {
     margin-left: 280px;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Mobile: Add padding for fixed navbar */
@@ -266,6 +280,112 @@ footer {
 @media (min-width: 992px) {
     .navbar.d-lg-none {
         display: none !important;
+    }
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 767.98px) {
+    /* Reduce section padding on mobile */
+    section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Timeline card header: stack on mobile */
+    .timeline-item .card-body > .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .timeline-item .card-body > .d-flex .badge {
+        margin-top: 0.5rem;
+    }
+
+    /* Timeline adjustments for mobile */
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-item::before {
+        left: -20px;
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Technical reports: stack layout */
+    .card-body > .d-flex.align-items-start {
+        flex-wrap: wrap;
+    }
+
+    .card-body > .d-flex.align-items-start .btn {
+        margin-top: 0.75rem;
+        margin-left: 0 !important;
+    }
+
+    /* Talks cards: stack content */
+    .card-body.d-flex.justify-content-between {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.5rem;
+    }
+
+    /* Publications list: stack DOI button */
+    .list-group-item .d-flex {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .list-group-item .d-flex .btn {
+        align-self: flex-start;
+    }
+
+    /* Project card header: wrap text */
+    .card-header.d-flex {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* Highlight cards: smaller numbers */
+    .highlight-card .display-5 {
+        font-size: 2rem;
+    }
+
+    /* Section title smaller */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    /* Badges wrap */
+    .badge {
+        white-space: normal;
+        text-align: left;
+    }
+}
+
+/* Extra small screens (< 576px) */
+@media (max-width: 575.98px) {
+    /* Even smaller highlight numbers */
+    .highlight-card .display-5 {
+        font-size: 1.75rem;
+    }
+
+    /* Stack education cards */
+    .education-card .card-body {
+        padding: 1rem;
+    }
+
+    /* Smaller card padding */
+    .card-body {
+        padding: 1rem;
+    }
+
+    /* Footer text */
+    footer p {
+        font-size: 0.8rem;
     }
 }
 
