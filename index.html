@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu-Chiao Jhuang | 莊雨樵</title>
+    <meta name="description" content="Yu-Chiao Jhuang (莊雨樵) - Ph.D. Candidate at NTUST, Associate Research Engineer at ITRI. Research focus: AI-RAN, Intent-Based Networking, O-RAN, and Agentic AI.">
+    <meta name="keywords" content="Yu-Chiao Jhuang, 莊雨樵, AI-RAN, O-RAN, Intent-Based Networking, IBN, ITRI, NTUST, 6G, B5G">
+    <meta name="author" content="Yu-Chiao Jhuang">
     <meta property="og:title" content="Yu-Chiao Jhuang | 莊雨樵">
+    <meta property="og:description" content="Ph.D. Candidate at NTUST, Associate Research Engineer at ITRI. Research focus: AI-RAN, Intent-Based Networking, and Agentic AI.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jych1a0.github.io/">
+    <meta property="og:image" content="https://jych1a0.github.io/images/profile.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Yu-Chiao Jhuang | 莊雨樵">
+    <meta name="twitter:description" content="Ph.D. Candidate at NTUST, Associate Research Engineer at ITRI. Research focus: AI-RAN, Intent-Based Networking.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { font-family: 'Inter', sans-serif; }
@@ -42,8 +53,8 @@
                 <a href="#education" class="text-neutral-600 hover:text-neutral-900">Education</a>
                 <a href="zh.html" class="px-3 py-1.5 bg-neutral-900 text-white rounded-lg hover:bg-neutral-700">中文</a>
             </div>
-            <button id="menuBtn" class="md:hidden p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="menuBtn" class="md:hidden p-2" aria-label="Toggle navigation menu" aria-expanded="false">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
@@ -483,7 +494,10 @@
     <script>
         // Mobile menu toggle
         document.getElementById('menuBtn').addEventListener('click', function() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+            const isExpanded = !menu.classList.contains('hidden');
+            this.setAttribute('aria-expanded', isExpanded);
         });
 
         // Close mobile menu on link click
