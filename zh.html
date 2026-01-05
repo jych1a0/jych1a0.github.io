@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- style: bootstrap-academic -->
+<!-- style: swiss-modernism -->
 <!-- content-version: 2025-01-04-v1 -->
 <html lang="zh-TW">
 <head>
@@ -18,705 +18,911 @@
     <meta name="twitter:title" content="莊雨樵 | Yu-Chiao Jhuang">
     <meta name="twitter:description" content="台科大博士候選人，工研院副研究員。研究專注：AI-RAN、意圖式組網。">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --red: #e63946;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-500: #6c757d;
+            --gray-800: #343a40;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--black);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        h1 { font-size: 4rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+        h2 { font-size: 2rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 24px; }
+        h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.3; }
+        h4 { font-size: 1rem; font-weight: 600; }
+
+        .text-sm { font-size: 0.875rem; }
+        .text-xs { font-size: 0.75rem; }
+        .text-gray { color: var(--gray-500); }
+        .text-red { color: var(--red); }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            border-bottom: 1px solid var(--black);
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        nav a {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        nav a:hover { color: var(--red); }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a.btn {
+            background: var(--black);
+            color: var(--white);
+            padding: 8px 16px;
+        }
+
+        .nav-links a.btn:hover {
+            background: var(--red);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero {
+            padding: 120px 0 80px;
+            border-bottom: 1px solid var(--black);
+        }
+
+        .hero .grid { align-items: end; }
+        .hero-content { grid-column: span 8; }
+        .hero-sidebar { grid-column: span 4; text-align: right; }
+        .hero h1 { margin-bottom: 24px; }
+        .hero-subtitle { font-size: 1.25rem; color: var(--gray-500); margin-bottom: 16px; }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 24px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border: 1px solid var(--black);
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .tag.red {
+            background: var(--red);
+            color: var(--white);
+            border-color: var(--red);
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 2px solid var(--black);
+        }
+
+        .stats {
+            padding: 48px 0;
+            border-bottom: 1px solid var(--black);
+            background: var(--gray-100);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 24px 0;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-number.red { color: var(--red); }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-500);
+        }
+
+        section {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        section:last-of-type { border-bottom: none; }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 48px;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 16px;
+        }
+
+        .section-number {
+            font-size: 0.875rem;
+            color: var(--red);
+            font-weight: 500;
+        }
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 48px;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .experience-item:last-child { border-bottom: none; }
+        .experience-date { font-size: 0.875rem; color: var(--gray-500); }
+        .experience-content h3 { margin-bottom: 4px; }
+        .experience-company { color: var(--gray-500); font-size: 0.875rem; margin-bottom: 12px; }
+
+        .experience-content ul {
+            list-style: none;
+            font-size: 0.875rem;
+            color: var(--gray-800);
+        }
+
+        .experience-content ul li {
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .experience-content ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--red);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .project-card {
+            border: 1px solid var(--black);
+            padding: 32px;
+            position: relative;
+        }
+
+        .project-card.featured { border-width: 2px; }
+
+        .project-card.featured::before {
+            content: "重點專案";
+            position: absolute;
+            top: -1px;
+            right: 24px;
+            background: var(--red);
+            color: var(--white);
+            font-size: 0.625rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .project-date { font-size: 0.75rem; color: var(--gray-500); margin-bottom: 8px; }
+        .project-card h3 { margin-bottom: 8px; }
+        .project-org { font-size: 0.875rem; color: var(--gray-500); margin-bottom: 16px; }
+
+        .project-card ul {
+            list-style: none;
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+        }
+
+        .project-card ul li {
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .project-card ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--gray-500);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+
+        .project-tags .tag { font-size: 0.625rem; padding: 2px 8px; }
+
+        .project-patent {
+            font-size: 0.75rem;
+            padding: 12px;
+            background: var(--gray-100);
+            border-left: 2px solid var(--red);
+        }
+
+        .pub-item {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--gray-200);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .pub-item:last-child { border-bottom: none; }
+        .pub-item p { font-size: 0.875rem; line-height: 1.6; }
+
+        .pub-item a {
+            color: var(--red);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .pub-item a:hover { text-decoration: underline; }
+        .pub-item.no-link { grid-template-columns: 1fr; }
+
+        .sidebar-card {
+            border: 1px solid var(--black);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .sidebar-card h3 {
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .sidebar-card.red-border {
+            border-color: var(--red);
+            border-width: 2px;
+        }
+
+        .talk-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .talk-item:last-child { border-bottom: none; }
+        .talk-item h4 { margin-bottom: 4px; }
+        .talk-item p { font-size: 0.75rem; color: var(--gray-500); margin-bottom: 4px; }
+        .talk-item a { font-size: 0.75rem; color: var(--red); text-decoration: none; }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .edu-card {
+            border: 1px solid var(--black);
+            padding: 24px;
+            text-align: center;
+        }
+
+        .edu-card.highlight {
+            border-width: 2px;
+            border-color: var(--red);
+        }
+
+        .edu-icon { font-size: 2rem; margin-bottom: 16px; }
+        .edu-card h3 { margin-bottom: 8px; }
+        .edu-card p { font-size: 0.875rem; color: var(--gray-500); }
+
+        .edu-date {
+            font-size: 0.75rem;
+            margin-top: 12px;
+            padding: 4px 12px;
+            background: var(--gray-100);
+            display: inline-block;
+        }
+
+        .award-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .award-year {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--red);
+            min-width: 50px;
+        }
+
+        .award-title { font-size: 0.875rem; }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .skill-item h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-500);
+            margin-bottom: 8px;
+        }
+
+        .skill-item p { font-size: 0.875rem; }
+
+        footer {
+            padding: 48px 0;
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+
+        footer p { font-size: 0.75rem; color: var(--gray-500); }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-links a {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .contact-links a:hover { color: var(--red); }
+
+        /* Mobile menu hidden by default */
+        .mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.5rem; }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+
+            .mobile-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                border-bottom: 1px solid var(--black);
+                padding: 24px;
+            }
+
+            .mobile-menu.active { display: block; }
+
+            .mobile-menu a {
+                display: block;
+                padding: 12px 0;
+                border-bottom: 1px solid var(--gray-200);
+            }
+
+            .hero-content, .hero-sidebar { grid-column: span 12; }
+            .hero-sidebar { text-align: left; margin-top: 24px; }
+            .profile-img { width: 120px; height: 120px; }
+
+            /* Override inline grid-column styles for mobile */
+            .stat-item { grid-column: span 6 !important; }
+            .grid > div[style*="grid-column"] { grid-column: span 12 !important; }
+
+            .experience-item { grid-template-columns: 1fr; gap: 8px; }
+            .project-grid { grid-template-columns: 1fr; }
+            .edu-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+            /* Publications sidebar stacks below main content */
+            .pub-item { grid-template-columns: 1fr; gap: 12px; }
+        }
+    </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#sidebar-nav">
-    <!-- Mobile Navbar -->
-    <nav class="navbar navbar-dark bg-primary d-lg-none fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">莊雨樵</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
-                <span class="navbar-toggler-icon"></span>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" style="font-weight: 700;">莊雨樵</a>
+            <div class="nav-links">
+                <a href="#about">關於我</a>
+                <a href="#experience">經歷</a>
+                <a href="#projects">專案</a>
+                <a href="#publications">學術成果</a>
+                <a href="#education">學歷</a>
+                <a href="index.html" class="btn">English</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="切換導航選單" aria-expanded="false" id="menuBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
             </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about" onclick="toggleMenu()">關於我</a>
+            <a href="#experience" onclick="toggleMenu()">經歷</a>
+            <a href="#projects" onclick="toggleMenu()">專案</a>
+            <a href="#publications" onclick="toggleMenu()">學術成果</a>
+            <a href="#education" onclick="toggleMenu()">學歷</a>
+            <a href="index.html">English</a>
         </div>
     </nav>
 
-    <!-- Mobile Offcanvas Sidebar -->
-    <div class="offcanvas offcanvas-start bg-primary text-white d-lg-none" tabindex="-1" id="mobileSidebar">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">選單</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    <section class="hero">
+        <div class="container">
+            <div class="grid">
+                <div class="hero-content">
+                    <h1>莊雨樵</h1>
+                    <p class="hero-subtitle">Yu-Chiao Jhuang</p>
+                    <p class="text-sm text-gray">博士候選人，台科大<br>副研究員，工研院</p>
+                    <div class="hero-tags">
+                        <span class="tag red">AI-RAN</span>
+                        <span class="tag">O-RAN</span>
+                        <span class="tag">IBN</span>
+                        <span class="tag">B5G/6G</span>
+                        <span class="tag">n8n</span>
+                        <span class="tag">Dify</span>
+                    </div>
+                </div>
+                <div class="hero-sidebar">
+                    <img src="images/profile.jpg" alt="莊雨樵" class="profile-img">
+                    <div class="contact-links" style="margin-top: 24px;">
+                        <a href="mailto:wo.jych1a0@gmail.com">wo.jych1a0@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/yu-chiao-jhuang-644821163" target="_blank">LinkedIn →</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="offcanvas-body text-center">
-            <img src="images/profile.jpg" alt="莊雨樵" class="rounded-circle mb-3" width="120" height="120">
-            <h5>莊雨樵</h5>
-            <p class="text-white-50">Yu-Chiao Jhuang</p>
-            <nav class="nav flex-column">
-                <a class="nav-link text-white" href="#highlights" data-bs-dismiss="offcanvas">亮點</a>
-                <a class="nav-link text-white" href="#about" data-bs-dismiss="offcanvas">關於我</a>
-                <a class="nav-link text-white" href="#experience" data-bs-dismiss="offcanvas">工作經歷</a>
-                <a class="nav-link text-white" href="#projects" data-bs-dismiss="offcanvas">專案</a>
-                <a class="nav-link text-white" href="#publications" data-bs-dismiss="offcanvas">學術成果</a>
-                <a class="nav-link text-white" href="#education" data-bs-dismiss="offcanvas">學歷</a>
-            </nav>
-            <hr class="my-3 opacity-25">
-            <a href="index.html" class="btn btn-outline-light btn-sm">English</a>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="grid">
+                <div class="stat-item" style="grid-column: span 2;">
+                    <div class="stat-number red">70%</div>
+                    <div class="stat-label">操作時間縮減</div>
+                </div>
+                <div class="stat-item" style="grid-column: span 2;">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">專利申請中</div>
+                </div>
+                <div class="stat-item" style="grid-column: span 2;">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">學術發表</div>
+                </div>
+                <div class="stat-item" style="grid-column: span 2;">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">技術演講</div>
+                </div>
+                <div class="stat-item" style="grid-column: span 2;">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">O-RAN 研究報告</div>
+                </div>
+                <div class="stat-item" style="grid-column: span 2;">
+                    <div class="stat-number">22+</div>
+                    <div class="stat-label">累計帶領人數</div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Desktop Sidebar -->
-    <aside class="sidebar d-none d-lg-flex flex-column bg-primary text-white">
-        <div class="sidebar-content p-4 text-center">
-            <img src="images/profile.jpg" alt="莊雨樵" class="rounded-circle border border-3 border-white shadow mb-3 profile-photo">
-            <h4 class="fw-bold mb-1">莊雨樵</h4>
-            <p class="text-white-50 mb-3">Yu-Chiao Jhuang</p>
-
-            <div class="mb-3">
-                <p class="small mb-1">專攻</p>
-                <span class="badge bg-info fs-6 mb-2">意圖式組網</span>
-                <div class="d-flex flex-wrap justify-content-center gap-1">
-                    <span class="badge bg-light text-dark">AI-RAN</span>
-                    <span class="badge bg-light text-dark">AgenticRAN</span>
-                    <span class="badge bg-light text-dark">O-RAN</span>
-                    <span class="badge bg-light text-dark">B5G/6G</span>
-                    <span class="badge bg-light text-dark">n8n</span>
-                    <span class="badge bg-light text-dark">Dify</span>
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>關於我</h2>
+                <span class="section-number">01</span>
+            </div>
+            <div class="grid">
+                <div style="grid-column: span 8;">
+                    <p style="font-size: 1.125rem; line-height: 1.8;">
+                        台科大博士候選人，現職工研院資通所。研究專注於 <strong>AI-RAN、意圖式組網與 AgenticRAN</strong>，探索如何透過 AI 代理實現網路零接觸管理。曾帶領累計至少 22 人團隊執行多項專案。
+                    </p>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-top: 16px;">
+                        近期 IBN 專案透過 AI 自動化達成<span class="text-red" style="font-weight: 600;">操作時間縮減 70%</span>，並於 2025 台灣創新技術博覽會展出。曾與 Dell、Nokia、NVIDIA 等業界夥伴共同撰寫 O-RAN 綠色通訊研究報告。
+                    </p>
                 </div>
             </div>
-
-            <div class="mb-3 small">
-                <p class="mb-1"><i class="bi bi-mortarboard me-1"></i> 博士候選人，台科大</p>
-                <p class="mb-0"><i class="bi bi-building me-1"></i> 副研究員，工研院</p>
-            </div>
-
-            <div class="mb-3">
-                <a href="mailto:wo.jych1a0@gmail.com" class="d-block text-white-50 text-decoration-none small mb-1">
-                    <i class="bi bi-envelope me-1"></i> wo.jych1a0@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/yu-chiao-jhuang-644821163" target="_blank" class="d-block text-white-50 text-decoration-none small mb-1">
-                    <i class="bi bi-linkedin me-1"></i> LinkedIn
-                </a>
-                <!-- <a href="https://github.com/jych1a0" target="_blank" class="d-block text-white-50 text-decoration-none small">
-                    <i class="bi bi-github me-1"></i> GitHub
-                </a> -->
-            </div>
-
-            <!-- <a href="JYC_Resume.pdf" class="btn btn-info btn-sm mb-4" download>
-                <i class="bi bi-download me-1"></i> 下載履歷
-            </a> -->
-
-            <nav id="sidebar-nav" class="nav flex-column text-start">
-                <a class="nav-link text-white py-2" href="#highlights"><i class="bi bi-star me-2"></i>亮點</a>
-                <a class="nav-link text-white py-2" href="#about"><i class="bi bi-person me-2"></i>關於我</a>
-                <a class="nav-link text-white py-2" href="#experience"><i class="bi bi-briefcase me-2"></i>工作經歷</a>
-                <a class="nav-link text-white py-2" href="#projects"><i class="bi bi-folder me-2"></i>專案</a>
-                <a class="nav-link text-white py-2" href="#publications"><i class="bi bi-journal-text me-2"></i>學術成果</a>
-                <a class="nav-link text-white py-2" href="#education"><i class="bi bi-award me-2"></i>學歷</a>
-            </nav>
-
-            <hr class="my-3 opacity-25">
-            <a href="index.html" class="btn btn-outline-light btn-sm"><i class="bi bi-translate me-1"></i> English</a>
         </div>
-    </aside>
+    </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Highlights Section -->
-        <section id="highlights" class="py-5 bg-light">
-            <div class="container-fluid px-4">
-                <div class="row g-3">
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="card h-100 border-0 shadow-sm highlight-card primary-card">
-                            <div class="card-body text-center text-white">
-                                <i class="bi bi-bullseye fs-1 mb-2"></i>
-                                <p class="small mb-1 opacity-75">研究重點</p>
-                                <h5 class="fw-bold mb-0">AI-RAN / IBN / AgenticRAN</h5>
-                            </div>
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>工作經歷</h2>
+                <span class="section-number">02</span>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2024年8月 — 至今</div>
+                <div class="experience-content">
+                    <h3>副研究員</h3>
+                    <p class="experience-company">工業技術研究院 資訊與通訊研究所</p>
+                    <ul>
+                        <li>低軌衛星專案：與國家太空中心（TASA）及台科大合作</li>
+                        <li>意圖式組網（IBN）：擔任專案負責人，開發 AI 驅動網路協調方案</li>
+                        <li>參展 2025 台灣創新技術博覽會</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2022年12月 — 2024年7月</div>
+                <div class="experience-content">
+                    <h3>B5G 研究員 | 實習</h3>
+                    <p class="experience-company">醫陽科技股份有限公司</p>
+                    <ul>
+                        <li>研究 OTA（空中傳輸）傳輸測量方法</li>
+                        <li>分析 5G 網路系統架構</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2022年9月 — 2022年12月</div>
+                <div class="experience-content">
+                    <h3>全端工程師 | 實習</h3>
+                    <p class="experience-company">Coretek LLC. — 美國拉斯維加斯</p>
+                    <ul>
+                        <li>整合 Jira、Tempo 和 Slack</li>
+                        <li>建立 SaaS 服務，部署至 Heroku</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2020年6月 — 2020年10月</div>
+                <div class="experience-content">
+                    <h3>資料分析師 | 實習</h3>
+                    <p class="experience-company">潮網科技 — 台北</p>
+                    <ul>
+                        <li>維護容器化 Laravel PHP 投票系統</li>
+                        <li>Google Analytics 點擊率分析</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2020年7月 — 2020年9月</div>
+                <div class="experience-content">
+                    <h3>韌體工程師 | 實習</h3>
+                    <p class="experience-company">芯展科技 — 台北</p>
+                    <ul>
+                        <li>修改裝置核心以建立 I2C 與 SPI 連接至 FPGA</li>
+                        <li>使用 Python Locust 工具進行系統壓力測試</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>專案經歷</h2>
+                <span class="section-number">03</span>
+            </div>
+            <div class="project-grid">
+                <div class="project-card featured">
+                    <div class="project-date">2025年1月 — 至今</div>
+                    <h3>意圖式組網解決方案（IBN）</h3>
+                    <p class="project-org">工業技術研究院</p>
+                    <ul>
+                        <li><strong>專案負責人</strong> — 台灣首套意圖式組網解決方案（團隊：2人）</li>
+                        <li>IBN Orchestrator：結合生成式 AI 的自然語言介面</li>
+                        <li>參展 2025 台灣創新技術博覽會</li>
+                        <li>預計：O-RAN WG3 F2F（2026年2月）、MWC 2026</li>
+                        <li><strong style="color: var(--red);">透過 AI 自動化達成操作時間縮減 70%</strong></li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">5G/6G</span>
+                        <span class="tag">生成式 AI</span>
+                        <span class="tag">AI Agent</span>
+                        <span class="tag">n8n</span>
+                        <span class="tag">Dify</span>
+                    </div>
+                    <div class="project-patent">
+                        <strong>專利：</strong>意圖釐清與多源知識整合之意圖式組網運作方法 (2025) — 台、美、日、中
+                    </div>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-date">2022年9月 — 至今</div>
+                    <h3>6G AI/ML 平台</h3>
+                    <p class="project-org">國科會 / 台科大</p>
+                    <ul>
+                        <li><strong>專案負責人</strong> — 帶領 14 人團隊</li>
+                        <li>EuCNC，比利時（2024年6月）：AR/VR 展示</li>
+                        <li>COSCUP 2024：O-RAN + AI/ML 平台 AR/VR QoS</li>
+                        <li>O-RAN nGRG：共同撰寫綠色通訊研究報告</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">O-RAN</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">KubeFlow</span>
+                        <span class="tag">MLOps</span>
+                    </div>
+                    <div class="project-patent">
+                        <strong>專利：</strong>應用於AI-RAN之跨平台資源協調系統及方法 (2025) — 台、美
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-date">2024年8月 — 2025年5月</div>
+                    <h3>低軌衛星網路效能分析</h3>
+                    <p class="project-org">工研院</p>
+                    <ul>
+                        <li>與國家太空中心（TASA）合作</li>
+                        <li>帶領與台科大產學合作案</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">低軌衛星</span>
+                        <span class="tag">TASA</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-date">2021 — 2022</div>
+                    <h3>AI/ML 手勢辨識</h3>
+                    <p class="project-org">全科綜電</p>
+                    <ul>
+                        <li>準確率：<strong>99.75%</strong></li>
+                        <li>邊緣裝置部署</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">CNN-LSTM</span>
+                        <span class="tag">FMCW 雷達</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-date">2021</div>
+                    <h3>Android in Docker</h3>
+                    <p class="project-org">芯展科技</p>
+                    <ul>
+                        <li>Harbor 私有 registry + VPN</li>
+                        <li>ARM 節點 iSCSI 儲存</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">K3s</span>
+                        <span class="tag">iSCSI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <div class="container">
+            <div class="section-header">
+                <h2>學術成果</h2>
+                <span class="section-number">04</span>
+            </div>
+            <div class="grid">
+                <div style="grid-column: span 8;">
+                    <h3 style="margin-bottom: 24px;">期刊與會議論文</h3>
+                    <div class="pub-item">
+                        <p>Lin, S. H., <strong>Jhuang, Y. C.</strong>, et al. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM." <em>ICADCML 2025</em></p>
+                        <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank">DOI →</a>
+                    </div>
+                    <div class="pub-item">
+                        <p>Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method." <em>ICADCML 2025</em></p>
+                        <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank">DOI →</a>
+                    </div>
+                    <div class="pub-item no-link">
+                        <p>Hung, P. C., Lin, Y. K., <strong>Jhuang, Y. C.</strong>, Choong, T. W., & Leu, J. S. (2025). "DMMP: The AI Service Platform with O-RAN Toward AI-RAN." <em>EuCNC/6G Summit 2025</em></p>
+                    </div>
+                    <div class="pub-item no-link">
+                        <p>Yu, H. S., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2024). "Image Recognition-Based Indoor Positioning System Using Federated Learning." <em>IEEE VTC Fall 2024</em></p>
+                    </div>
+                    <div class="pub-item">
+                        <p><strong>Jhuang, Y. C.</strong>, et al. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11).</p>
+                        <a href="https://doi.org/10.3390/s22114260" target="_blank">DOI →</a>
+                    </div>
+                    <h3 style="margin: 48px 0 24px;">研討會海報</h3>
+                    <div class="pub-item no-link">
+                        <p>Tsai, Y. H., <strong>Jhuang, Y. C.</strong>, Choong, T. W., & Leu, J. S. (2024). "An MLOps-Based Automated Indoor Positioning System." <em>2024 EUCNC & 6G Summit</em>，比利時安特衛普。</p>
+                    </div>
+                </div>
+                <div style="grid-column: span 4;">
+                    <div class="sidebar-card red-border">
+                        <h3>O-RAN 技術報告</h3>
+                        <p class="text-sm" style="margin-bottom: 12px;">RR-2024-08：O-RAN 綠色通訊</p>
+                        <p class="text-xs text-gray" style="margin-bottom: 12px;"><strong>主要貢獻：</strong>第7節 — 節能 AI/ML 平台</p>
+                        <p class="text-xs text-gray" style="margin-bottom: 16px;">貢獻單位：Dell, Nokia, Mavenir, Rakuten, NVIDIA, NTUST</p>
+                        <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank" style="display: inline-block; padding: 8px 16px; background: var(--red); color: var(--white); text-decoration: none; font-size: 0.75rem; font-weight: 500;">查看 PDF →</a>
+                    </div>
+                    <div class="sidebar-card">
+                        <h3>演講</h3>
+                        <div class="talk-item">
+                            <h4>COSCUP 2024</h4>
+                            <p>O-RAN + AI/ML 平台 AR/VR QoS</p>
+                            <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank">YouTube →</a>
+                        </div>
+                        <div class="talk-item">
+                            <h4>COSCUP 2023</h4>
+                            <p>AI/ML in 5G O-RAN</p>
+                            <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank">YouTube →</a>
                         </div>
                     </div>
-                    <div class="col-6 col-md-6 col-xl-4">
-                        <div class="card h-100 border-0 shadow-sm highlight-card">
-                            <div class="card-body text-center">
-                                <h2 class="display-5 fw-bold text-primary mb-0">70%</h2>
-                                <p class="small text-muted mb-1">SMO 操作時間縮減</p>
-                                <span class="badge bg-success">IBN</span>
-                                <span class="badge bg-info">Agentic AI</span>
-                            </div>
+                    <div class="sidebar-card">
+                        <h3>專利（申請中）</h3>
+                        <div style="padding: 12px 0; border-bottom: 1px solid var(--gray-200);">
+                            <p class="text-sm" style="margin-bottom: 4px;">意圖釐清與多源知識整合之意圖式組網運作方法 (2025)</p>
+                            <p class="text-xs text-gray">台灣、美國、日本、中國大陸</p>
                         </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-4">
-                        <div class="card h-100 border-0 shadow-sm highlight-card">
-                            <div class="card-body text-center">
-                                <h2 class="display-5 fw-bold text-primary mb-0">2</h2>
-                                <p class="small text-muted mb-1">專利申請中</p>
-                                <span class="badge bg-secondary">台、美、日、中</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-4">
-                        <div class="card h-100 border-0 shadow-sm highlight-card">
-                            <div class="card-body text-center">
-                                <h2 class="display-5 fw-bold text-primary mb-0">5</h2>
-                                <p class="small text-muted mb-1">學術發表</p>
-                                <span class="badge bg-info">SCI / Springer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-4">
-                        <div class="card h-100 border-0 shadow-sm highlight-card">
-                            <div class="card-body text-center">
-                                <h2 class="display-5 fw-bold text-primary mb-0">2</h2>
-                                <p class="small text-muted mb-1">技術演講</p>
-                                <span class="badge bg-warning text-dark">COSCUP</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="card h-100 border-0 shadow-sm highlight-card">
-                            <div class="card-body text-center">
-                                <h2 class="display-5 fw-bold text-primary mb-0">1</h2>
-                                <p class="small text-muted mb-1">O-RAN 研究報告</p>
-                                <span class="badge bg-dark">Dell, Nokia, NVIDIA</span>
-                            </div>
+                        <div style="padding: 12px 0;">
+                            <p class="text-sm" style="margin-bottom: 4px;">應用於AI-RAN之跨平台資源協調系統及方法 (2025)</p>
+                            <p class="text-xs text-gray">台灣、美國</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-5">
-            <div class="container-fluid px-4">
-                <h2 class="section-title mb-4"><i class="bi bi-person-circle me-2"></i>關於我</h2>
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <p class="lead mb-0">
-                            台科大博士候選人，現職工研院資通所。研究專注於<strong class="text-primary">AI-RAN、意圖式組網與 AgenticRAN</strong>，探索如何透過 AI 代理實現網路零接觸管理。曾帶領累計至少 22 人團隊執行多項專案。學經歷涵蓋無線通訊、AI/ML 系統、雲端平台與全端開發。近期 IBN 專案透過 AI 自動化達成<span class="badge bg-success">操作時間縮減 70%</span>，並於 2025 台灣創新技術博覽會展出。曾與 Dell、Nokia、NVIDIA 等業界夥伴共同撰寫 O-RAN 綠色通訊研究報告。
-                        </p>
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>學歷與技能</h2>
+                <span class="section-number">05</span>
+            </div>
+            <div class="edu-grid" style="margin-bottom: 48px;">
+                <div class="edu-card highlight">
+                    <div class="edu-icon">🎓</div>
+                    <h3>電子與資訊工程博士</h3>
+                    <p>國立台灣科技大學</p>
+                    <span class="edu-date">2020年9月 — 至今</span>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">📚</div>
+                    <h3>電子與資訊工程碩士</h3>
+                    <p>台科大（逕升博士班）</p>
+                    <span class="edu-date">2019年9月 — 2020年9月</span>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">🎒</div>
+                    <h3>電子與資訊工程學士</h3>
+                    <p>國立台灣科技大學</p>
+                    <span class="edu-date">2015年9月 — 2019年7月</span>
+                </div>
+            </div>
+            <div class="grid" style="margin-bottom: 48px;">
+                <div style="grid-column: span 6;">
+                    <h3 style="margin-bottom: 24px;">獎項與榮譽</h3>
+                    <div class="award-item">
+                        <span class="award-year">2024</span>
+                        <span class="award-title">113年度斐陶斐榮譽學會會員</span>
+                    </div>
+                    <div class="award-item">
+                        <span class="award-year">2023</span>
+                        <span class="award-title">112學年度台科大校園傑出青年</span>
+                    </div>
+                    <div class="award-item">
+                        <span class="award-year">2023</span>
+                        <span class="award-title">112學年度電資學院傑出青年</span>
+                    </div>
+                    <div class="award-item">
+                        <span class="award-year">2022</span>
+                        <span class="award-title">110學年度創新創業教育計畫 — 佳作</span>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-5 bg-light">
-            <div class="container-fluid px-4">
-                <h2 class="section-title mb-4"><i class="bi bi-briefcase me-2"></i>工作經歷</h2>
-
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h5 class="card-title mb-1">副研究員</h5>
-                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>工業技術研究院 資訊與通訊研究所</p>
-                                    </div>
-                                    <span class="badge bg-primary">2024年8月 - 至今</span>
-                                </div>
-                                <ul class="mb-0">
-                                    <li>低軌衛星專案：與國家太空中心（TASA）及台科大合作，進行衛星網路效能分析</li>
-                                    <li>意圖式組網（IBN）：擔任專案負責人，開發 AI 驅動的網路協調解決方案</li>
-                                    <li>參展 2025 台灣創新技術博覽會，展示自然語言介面的 IBN Orchestrator</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h5 class="card-title mb-1">B5G 研究員 | 實習</h5>
-                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>醫陽科技股份有限公司</p>
-                                    </div>
-                                    <span class="badge bg-secondary">2022年12月 - 2024年7月</span>
-                                </div>
-                                <ul class="mb-0">
-                                    <li>研究 OTA（空中傳輸）傳輸測量方法</li>
-                                    <li>分析 5G 網路系統架構</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h5 class="card-title mb-1">全端工程師 | 實習</h5>
-                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>Coretek LLC. - 美國拉斯維加斯</p>
-                                    </div>
-                                    <span class="badge bg-secondary">2022年9月 - 2022年12月</span>
-                                </div>
-                                <ul class="mb-0">
-                                    <li>整合 Jira、Tempo 和 Slack 到第三方應用程式</li>
-                                    <li>建立 SaaS 服務，部署至 Heroku 並整合 AWS EC2 上的 PostgreSQL</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h5 class="card-title mb-1">資料分析師 | 實習</h5>
-                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>潮網科技 - 台北</p>
-                                    </div>
-                                    <span class="badge bg-secondary">2020年6月 - 2020年10月</span>
-                                </div>
-                                <ul class="mb-0">
-                                    <li>負責維護和優化使用容器化 Laravel PHP 的投票系統</li>
-                                    <li>使用 Google Analytics 進行數據收集、預處理和點擊率分析</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <h5 class="card-title mb-1">韌體工程師 | 實習</h5>
-                                        <p class="text-muted mb-0"><i class="bi bi-building me-1"></i>芯展科技 - 台北</p>
-                                    </div>
-                                    <span class="badge bg-secondary">2020年7月 - 2020年9月</span>
-                                </div>
-                                <ul class="mb-0">
-                                    <li>修改裝置核心以建立與系統級晶片 FPGA 的 I2C 和 SPI 連接</li>
-                                    <li>使用 Python 的 Locust 工具對系統進行壓力測試</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <h3 style="margin-bottom: 24px;">技能</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>AI / Agentic AI</h4>
+                    <p>n8n, Dify, AgentOps, LangChain, RAG</p>
+                </div>
+                <div class="skill-item">
+                    <h4>系統架構</h4>
+                    <p>B5G/6G、O-RAN、意圖式組網、雲原生</p>
+                </div>
+                <div class="skill-item">
+                    <h4>方法論</h4>
+                    <p>DevOps、MLOps、微服務、IEEE 4+1 View</p>
+                </div>
+                <div class="skill-item">
+                    <h4>程式語言</h4>
+                    <p>Python, Go, C/C++, Java, JavaScript, PHP</p>
+                </div>
+                <div class="skill-item">
+                    <h4>平台工具</h4>
+                    <p>AWS, Azure, GCP, Kubernetes, Docker, KubeFlow</p>
+                </div>
+                <div class="skill-item">
+                    <h4>AI/ML 框架</h4>
+                    <p>TensorFlow, PyTorch, OpenAI API, HuggingFace</p>
+                </div>
+                <div class="skill-item">
+                    <h4>全端開發</h4>
+                    <p>Django, Next.js, FastAPI, Mobile App, ELK Stack</p>
+                </div>
+                <div class="skill-item">
+                    <h4>資料架構</h4>
+                    <p>OLTP, OLAP, PostgreSQL, Redis, Neo4j, Cassandra</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-5">
-            <div class="container-fluid px-4">
-                <h2 class="section-title mb-4"><i class="bi bi-folder me-2"></i>專案經歷</h2>
+    <footer>
+        <p>&copy; 2025 莊雨樵. All rights reserved.</p>
+    </footer>
 
-                <div class="row g-4">
-                    <!-- IBN Project - Featured -->
-                    <div class="col-12 col-lg-6">
-                        <div class="card h-100 border-0 shadow project-card featured-project">
-                            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                                <span><i class="bi bi-star-fill me-2"></i>重點專案</span>
-                                <span class="badge bg-light text-primary">2025年1月 - 至今</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">意圖式組網解決方案（IBN）</h5>
-                                <p class="text-muted small"><i class="bi bi-building me-1"></i>工業技術研究院</p>
-                                <ul class="small">
-                                    <li><strong>專案負責人</strong> - 台灣首套意圖式組網解決方案（團隊：2人）</li>
-                                    <li>IBN Orchestrator：結合生成式 AI 的自然語言網路管理介面</li>
-                                    <li>參展 <a href="https://tie.twtm.com.tw/zh-tw/exhibition-detail/5207" target="_blank" class="text-decoration-none">2025 台灣創新技術博覽會</a></li>
-                                    <li>預計展示：O-RAN WG3 F2F（2026年2月，羅馬）、MWC 2026（巴塞隆納）</li>
-                                    <li><strong class="text-success">透過 AI 自動化達成網路操作時間縮減 70%</strong></li>
-                                </ul>
-                                <div class="mb-3">
-                                    <span class="badge bg-primary me-1">5G/6G</span>
-                                    <span class="badge bg-info me-1">生成式 AI</span>
-                                    <span class="badge bg-success me-1">AI Agent</span>
-                                    <span class="badge bg-warning text-dark me-1">NLP</span>
-                                    <span class="badge bg-secondary me-1">n8n</span>
-                                    <span class="badge bg-dark me-1">Dify</span>
-                                    <span class="badge bg-light text-dark me-1">AgentOps</span>
-                                </div>
-                                <div class="alert alert-secondary py-2 mb-0 small">
-                                    <i class="bi bi-file-earmark-text me-1"></i><strong>專利：</strong>意圖釐清與多源知識整合之意圖式組網運作方法 (2025) - 台、美、日、中
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 6G AI/ML Platform - Featured -->
-                    <div class="col-12 col-lg-6">
-                        <div class="card h-100 border-0 shadow project-card featured-project">
-                            <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                                <span><i class="bi bi-star-fill me-2"></i>重點專案</span>
-                                <span class="badge bg-light text-primary">2022年9月 - 至今</span>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">6G AI/ML 平台</h5>
-                                <p class="text-muted small"><i class="bi bi-building me-1"></i>國家科學及技術委員會 (NSTC) / 台科大</p>
-                                <ul class="small">
-                                    <li><strong>專案負責人</strong> - 帶領 14 人團隊開發永續 AI/ML 平台</li>
-                                    <li>EuCNC，比利時（2024年6月）：展示基於 5G 核心網路和 srsRAN 的 AR/VR 應用</li>
-                                    <li>COSCUP 2024：O-RAN + AI/ML 平台 AR/VR QoS</li>
-                                    <li>COSCUP 2023：發表開發的 AI/ML 平台概念</li>
-                                    <li>O-RAN nGRG：共同撰寫綠色通訊研究報告 (RR-2024-08)</li>
-                                </ul>
-                                <div class="mb-3">
-                                    <span class="badge bg-danger me-1">O-RAN</span>
-                                    <span class="badge bg-info me-1">Kubernetes</span>
-                                    <span class="badge bg-secondary me-1">KubeFlow</span>
-                                    <span class="badge bg-dark me-1">MLOps</span>
-                                    <span class="badge bg-primary me-1">Full-Stack</span>
-                                    <span class="badge bg-warning text-dark me-1">IEEE 4+1</span>
-                                </div>
-                                <div class="alert alert-secondary py-2 mb-0 small">
-                                    <i class="bi bi-file-earmark-text me-1"></i><strong>專利：</strong>應用於AI-RAN之跨平台資源協調系統及方法 (2025) - 台、美
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- LEO Satellite -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm project-card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h6 class="card-title mb-0">低軌衛星網路效能分析</h6>
-                                    <span class="badge bg-secondary">2024年8月 - 2025年5月</span>
-                                </div>
-                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>工研院</p>
-                                <ul class="small mb-2">
-                                    <li>與國家太空中心（TASA）合作</li>
-                                    <li>帶領與國立台灣科技大學產學合作案</li>
-                                    <li>衛星網路模擬與效能分析</li>
-                                </ul>
-                                <span class="badge bg-light text-dark me-1">低軌衛星</span>
-                                <span class="badge bg-light text-dark me-1">TASA</span>
-                                <span class="badge bg-light text-dark">網路模擬</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Gesture Recognition -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm project-card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h6 class="card-title mb-0">AI/ML 手勢辨識</h6>
-                                    <span class="badge bg-secondary">2021-2022</span>
-                                </div>
-                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>全科綜電</p>
-                                <ul class="small mb-2">
-                                    <li>準確率：<strong>99.75%</strong></li>
-                                    <li>邊緣裝置部署</li>
-                                </ul>
-                                <span class="badge bg-light text-dark me-1">TensorFlow</span>
-                                <span class="badge bg-light text-dark me-1">CNN-LSTM</span>
-                                <span class="badge bg-light text-dark">FMCW 雷達</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Android in Docker -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm project-card">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h6 class="card-title mb-0">Docker 中的 Android 系統</h6>
-                                    <span class="badge bg-secondary">2021</span>
-                                </div>
-                                <p class="text-muted small mb-2"><i class="bi bi-building me-1"></i>芯展科技</p>
-                                <ul class="small mb-2">
-                                    <li>Harbor 私有映像檔庫 + VPN</li>
-                                    <li>iSCSI 儲存解決方案</li>
-                                </ul>
-                                <span class="badge bg-light text-dark me-1">Kubernetes</span>
-                                <span class="badge bg-light text-dark me-1">K3s</span>
-                                <span class="badge bg-light text-dark">iSCSI</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Publications Section -->
-        <section id="publications" class="py-5 bg-light">
-            <div class="container-fluid px-4">
-                <h2 class="section-title mb-4"><i class="bi bi-journal-text me-2"></i>學術成果</h2>
-
-                <!-- Papers -->
-                <h5 class="mb-3"><i class="bi bi-file-earmark-text me-2"></i>期刊與會議論文</h5>
-                <div class="list-group mb-4">
-                    <div class="list-group-item border-0 shadow-sm mb-2">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <p class="mb-1 small">Lin, S. H., <strong>Jhuang, Y. C.</strong>, et al. (2025). "Spatiotemporal Gesture Recognition System Based on Landmarks and CNN-LSTM." <em>Advances in Distributed Computing and Machine Learning (ICADCML 2025)</em>, pp. 169–181.</p>
-                            </div>
-                            <a href="https://doi.org/10.1007/978-981-96-6721-5_13" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
-                        </div>
-                    </div>
-                    <div class="list-group-item border-0 shadow-sm mb-2">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <p class="mb-1 small">Lin, Y. C., Wang, S. S., Chen, H. F., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2025). "MSADFusion: An Infrared and Visible Image Fusion Method." <em>Advances in Distributed Computing and Machine Learning (ICADCML 2025)</em>, pp. 33–45.</p>
-                            </div>
-                            <a href="https://doi.org/10.1007/978-981-96-6721-5_3" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
-                        </div>
-                    </div>
-                    <div class="list-group-item border-0 shadow-sm mb-2">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <p class="mb-1 small">Hung, P. C., Lin, Y. K., <strong>Jhuang, Y. C.</strong>, Choong, T. W., & Leu, J. S. (2025). "DMMP: The AI Service Platform with O-RAN Toward AI-RAN." <em>EuCNC/6G Summit 2025</em>, pp. 121–126.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-group-item border-0 shadow-sm mb-2">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <p class="mb-1 small">Yu, H. S., <strong>Jhuang, Y. C.</strong>, & Leu, J. S. (2024). "Image Recognition-Based Indoor Positioning System Using Federated Learning." <em>IEEE VTC Fall 2024</em>, pp. 1–5.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-group-item border-0 shadow-sm mb-2">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <p class="mb-1 small"><strong>Jhuang, Y. C.</strong>, et al. (2022). "Implementing a Hand Gesture Recognition System Based on Range-Doppler Map." <em>Sensors</em>, 22(11).</p>
-                            </div>
-                            <a href="https://doi.org/10.3390/s22114260" target="_blank" class="btn btn-outline-primary btn-sm">DOI</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Conference Posters -->
-                <h5 class="mb-3"><i class="bi bi-easel me-2"></i>研討會海報</h5>
-                <div class="list-group mb-4">
-                    <div class="list-group-item border-0 shadow-sm mb-2">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div>
-                                <p class="mb-1 small">Tsai, Y. H., <strong>Jhuang, Y. C.</strong>, Choong, T. W., & Leu, J. S. (2024). "An MLOps-Based Automated Indoor Positioning System: Towards IoT Architectures and Smart Applications." <em>2024 EUCNC & 6G Summit</em>, Antwerp, Belgium.</p>
-                            </div>
-                            <span class="badge bg-info">海報</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technical Reports -->
-                <h5 class="mb-3"><i class="bi bi-file-text me-2"></i>技術報告</h5>
-                <div class="card border-0 shadow-sm mb-4">
-                    <div class="card-body">
-                        <div class="d-flex align-items-start">
-                            <span class="badge bg-danger me-3">O-RAN</span>
-                            <div>
-                                <p class="mb-1 small">O-RAN nGRG (2024). "Use Case Analysis Related to Green Communication in O-RAN" [RR-2024-08]</p>
-                                <p class="mb-0 small text-muted"><strong>主要貢獻：</strong>第7節 - 節能 AI/ML 平台建置策略</p>
-                                <p class="mb-0 small text-muted">貢獻單位：Dell, Nokia, Mavenir, Rakuten, NVIDIA, NTUST</p>
-                            </div>
-                            <a href="https://mediastorage.o-ran.org/ngrg-rr/nGRG-RR-2024-08-O-RAN%20Green%20Communication%20Research%20Report.pdf" target="_blank" class="btn btn-outline-danger btn-sm ms-auto">PDF</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Talks -->
-                <h5 class="mb-3"><i class="bi bi-mic me-2"></i>演講與發表</h5>
-                <div class="row g-3 mb-4">
-                    <div class="col-md-6">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="badge bg-warning text-dark me-2">COSCUP 2024</span>
-                                    <span class="small">O-RAN + AI/ML 平台 AR/VR QoS</span>
-                                </div>
-                                <a href="https://www.youtube.com/watch?v=lvAAzukkSBM" target="_blank" class="btn btn-outline-danger btn-sm">
-                                    <i class="bi bi-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body d-flex justify-content-between align-items-center">
-                                <div>
-                                    <span class="badge bg-warning text-dark me-2">COSCUP 2023</span>
-                                    <span class="small">AI/ML in 5G O-RAN</span>
-                                </div>
-                                <a href="https://www.youtube.com/watch?v=-G87UmAeZWo" target="_blank" class="btn btn-outline-danger btn-sm">
-                                    <i class="bi bi-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Patents -->
-                <h5 class="mb-3"><i class="bi bi-shield-check me-2"></i>專利（申請中）</h5>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <div class="card border-start border-primary border-4 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="card-title small">意圖釐清與多源知識整合之意圖式組網運作方法 (2025)</h6>
-                                <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1"></i>台灣、美國、日本、中國大陸</p>
-                                <span class="badge bg-primary">專案：IBN</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card border-start border-info border-4 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="card-title small">應用於AI-RAN之跨平台資源協調系統及方法 (2025)</h6>
-                                <p class="small text-muted mb-1"><i class="bi bi-geo-alt me-1"></i>台灣、美國</p>
-                                <span class="badge bg-info">專案：6G AI/ML 平台</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="py-5">
-            <div class="container-fluid px-4">
-                <h2 class="section-title mb-4"><i class="bi bi-award me-2"></i>學歷與獎項</h2>
-
-                <!-- Education -->
-                <div class="row g-3 mb-4">
-                    <div class="col-md-4">
-                        <div class="card border-top border-primary border-4 shadow-sm h-100">
-                            <div class="card-body text-center">
-                                <i class="bi bi-mortarboard fs-2 text-primary mb-2"></i>
-                                <h6>電子與資訊工程博士</h6>
-                                <p class="small text-muted mb-1">國立台灣科技大學</p>
-                                <span class="badge bg-primary">2020年9月 - 至今</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-top border-secondary border-4 shadow-sm h-100">
-                            <div class="card-body text-center">
-                                <i class="bi bi-mortarboard fs-2 text-secondary mb-2"></i>
-                                <h6>電子與資訊工程碩士</h6>
-                                <p class="small text-muted mb-1">台科大（逕升博士班）</p>
-                                <span class="badge bg-secondary">2019年9月 - 2020年9月</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-top border-secondary border-4 shadow-sm h-100">
-                            <div class="card-body text-center">
-                                <i class="bi bi-mortarboard fs-2 text-secondary mb-2"></i>
-                                <h6>電子與資訊工程學士</h6>
-                                <p class="small text-muted mb-1">國立台灣科技大學</p>
-                                <span class="badge bg-secondary">2015年9月 - 2019年7月</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Awards -->
-                <h5 class="mb-3"><i class="bi bi-trophy me-2"></i>獎項與榮譽</h5>
-                <div class="list-group mb-4">
-                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
-                        <span class="badge bg-warning text-dark me-3">2024</span>
-                        <span>113年度斐陶斐榮譽學會會員</span>
-                    </div>
-                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
-                        <span class="badge bg-info me-3">2023</span>
-                        <span>112學年度台科大校園傑出青年</span>
-                    </div>
-                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
-                        <span class="badge bg-info me-3">2023</span>
-                        <span>112學年度電資學院傑出青年</span>
-                    </div>
-                    <div class="list-group-item border-0 shadow-sm d-flex align-items-center mb-2">
-                        <span class="badge bg-secondary me-3">2022</span>
-                        <span>110學年度創新創業教育計畫 - 佳作</span>
-                    </div>
-                </div>
-
-                <!-- Skills -->
-                <h5 class="mb-3"><i class="bi bi-tools me-2"></i>技能</h5>
-                <div class="row g-3">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-primary"><i class="bi bi-robot me-2"></i>AI / Agentic AI</h6>
-                                <p class="small mb-0">n8n, Dify, AgentOps, LangChain, RAG, Prompt Engineering</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-primary"><i class="bi bi-diagram-3 me-2"></i>系統架構</h6>
-                                <p class="small mb-0">B5G/6G、O-RAN、意圖式組網、雲原生架構</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-primary"><i class="bi bi-gear me-2"></i>方法論</h6>
-                                <p class="small mb-0">DevOps、MLOps、微服務、IEEE 4+1 View</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-primary"><i class="bi bi-code-slash me-2"></i>程式語言</h6>
-                                <p class="small mb-0">Python, Go, C/C++, Java, JavaScript, PHP</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-primary"><i class="bi bi-cloud me-2"></i>平台工具</h6>
-                                <p class="small mb-0">AWS, Azure, GCP, Kubernetes, Docker, KubeFlow</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-primary"><i class="bi bi-cpu me-2"></i>AI/ML 框架</h6>
-                                <p class="small mb-0">TensorFlow, PyTorch, OpenAI API, HuggingFace</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-primary"><i class="bi bi-layers me-2"></i>全端開發</h6>
-                                <p class="small mb-0">Django, Next.js, FastAPI, Mobile App, ELK Stack</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-body">
-                                <h6 class="text-primary"><i class="bi bi-database me-2"></i>資料架構</h6>
-                                <p class="small mb-0">OLTP, OLAP, PostgreSQL, Redis, Neo4j, Cassandra</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="bg-primary text-white text-center py-4">
-            <p class="mb-0">&copy; 2025 莊雨樵. All rights reserved.</p>
-        </footer>
-    </main>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Smooth Scrolling -->
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('menuBtn');
+            menu.classList.toggle('active');
+            const isExpanded = menu.classList.contains('active');
+            btn.setAttribute('aria-expanded', isExpanded);
+        }
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    // Close mobile offcanvas menu if open
-                    const offcanvasEl = document.getElementById('mobileSidebar');
-                    if (offcanvasEl && offcanvasEl.classList.contains('show')) {
-                        const bsOffcanvas = bootstrap.Offcanvas.getOrCreateInstance(offcanvasEl);
-                        bsOffcanvas.hide();
-                    }
-                    // Smooth scroll to target
-                    setTimeout(() => {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
