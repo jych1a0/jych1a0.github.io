@@ -18,7 +18,7 @@ NC='\033[0m' # No Color
 
 get_content_version() {
     local branch=$1
-    git show "$branch:index.html" 2>/dev/null | grep -oP '<!-- content-version: \K[^-]+-v\d+' || echo "not set"
+    git show "$branch:index.html" 2>/dev/null | grep -oP '<!-- content-version: \K[0-9]{4}-[0-9]{2}-[0-9]{2}-v[0-9]+' || echo "not set"
 }
 
 get_current_style() {
